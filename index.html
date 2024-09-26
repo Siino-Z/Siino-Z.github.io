@@ -9,6 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Swiper JS Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- Styles -->
     <style>
         * {
@@ -62,24 +65,23 @@
             font-size: 1rem;
             margin-bottom: 20px;
         }
-        ul {
-            list-style: none;
-            padding-left: 0;
+        .swiper-container {
+            width: 100%;
+            padding-bottom: 40px;
         }
-        ul li {
-            font-size: 1rem;
-            margin-bottom: 8px;
+        .swiper-slide {
+            background-color: #eef4f8;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #333;
+            height: 300px;
+            border-radius: 8px;
         }
-        ul ul {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: #005f99;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .swiper-pagination-bullet {
+            background-color: #005f99 !important;
         }
         .skills ul {
             display: flex;
@@ -124,39 +126,45 @@
         <p>I am an emerging Data Scientist with a passion for translating raw data into actionable insights. I have a background in Medical Science and Data Science, combining scientific knowledge with analytical expertise. My true passion lies in innovation. I aim to create solutions that solve problems across various industries. Ultimately, I want to contribute to improving the lives of South Africans, which also drives my deep interest in policy and research.</p>
     </section>
 
-    <section class="project">
+    <!-- Carousel moved below About Me -->
+    <section>
         <h2>Projects</h2>
-
-        <h3>1. Movie Recommendation System</h3>
-        <p><strong>Problem Statement:</strong> The challenge was to construct a recommendation algorithm capable of accurately predicting how a user will rate a movie they have not yet viewed based on their historical preferences. Leveraging the enriched MovieLens dataset, I developed a robust recommendation system that enhances content discovery and user satisfaction.</p>
-
-        <ul>
-            <li><strong>Techniques Used:</strong> Collaborative Filtering, Content-Based Filtering, IMDb, TMDB</li>
-            <li><strong>Model Performance:</strong></li>
-            <ul>
-                <li>KNNWithZScore: RMSE 1.039</li>
-                <li>BaselineOnly: RMSE 0.974</li>
-                <li>SVD: RMSE 0.971</li>
-                <li>SVDpp: RMSE 0.968</li>
-                <li>CoClustering: RMSE 1.121</li>
-            </ul>
-        </ul>
-
-        <h3>2. Climate Change Sentiment Analysis</h3>
-        <p><strong>Problem Statement:</strong> This project focuses on developing a Machine Learning model capable of classifying an individual's belief in climate change based on their tweets. The objective was to categorize sentiments into classes such as Pro, Neutral, Anti, and News, providing businesses with a comprehensive overview of public sentiment.</p>
-
-        <ul>
-            <li><strong>Techniques Used:</strong> Natural Language Processing (NLP), Sentiment Classification</li>
-            <li><strong>Model Performance:</strong></li>
-            <ul>
-                <li>Multinomial Naive Bayes: Accuracy 67.92%</li>
-                <li>Logistic Regression: Accuracy 73.20%</li>
-                <li>Support Vector Machine: Accuracy 74.08%</li>
-                <li>Random Forest: Accuracy 71.24%</li>
-                <li>SGD Classifier: Accuracy 71.74%</li>
-                <li>Ridge Classifier: Accuracy 73.96%</li>
-            </ul>
-        </ul>
+        <!-- Carousel Start -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div>
+                        <h3>Movie Recommendation System</h3>
+                        <p>Leveraged collaborative filtering and content-based filtering on MovieLens dataset to develop a robust recommendation system.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div>
+                        <h3>Climate Change Sentiment Analysis</h3>
+                        <p>Built a Machine Learning model to classify tweets based on sentiment regarding climate change using NLP techniques.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 - Placeholder -->
+                <div class="swiper-slide">
+                    <div>
+                        <h3>Coming Soon</h3>
+                        <p>Placeholder for future project #1.</p>
+                    </div>
+                </div>
+                <!-- Slide 4 - Placeholder -->
+                <div class="swiper-slide">
+                    <div>
+                        <h3>Coming Soon</h3>
+                        <p>Placeholder for future project #2.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Carousel End -->
     </section>
 
     <section class="skills">
@@ -182,6 +190,21 @@
 <footer>
     <p>Thank you for visiting my portfolio!</p>
 </footer>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 
 </body>
 </html>
