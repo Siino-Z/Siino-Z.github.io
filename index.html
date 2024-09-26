@@ -1,7 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sinothabo Zwane's Data Science / Analytics Portfolio">
+    <title>Sinothabo Zwane - Data Science Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #005f99;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #005f99;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        ul ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #005f99;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills ul li {
+            background: #eef4f8;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin: 5px;
+        }
+        .contact ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .contact ul li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 50px;
+            background-color: #005f99;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<header>
+    <h1>Sinothabo Zwane</h1>
+    <p>Data Scientist | Data Analyst | Research & Innovation</p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am an emerging Data Scientist with a passion for translating raw data into actionable insights. I have a background in Medical Science and Data Science, combining scientific knowledge with analytical expertise. My true passion lies in innovation. I aim to create solutions that solve problems across various industries. Ultimately, I want to contribute to improving the lives of South Africans, which also drives my deep interest in policy and research.</p>
+    </section>
+
+    <section class="project">
+        <h2>Projects</h2>
+
+        <h3>1. Movie Recommendation System</h3>
+        <p><strong>Problem Statement:</strong> The challenge was to construct a recommendation algorithm capable of accurately predicting how a user will rate a movie they have not yet viewed based on their historical preferences. Leveraging the enriched MovieLens dataset, I developed a robust recommendation system that enhances content discovery and user satisfaction.</p>
+
+        <ul>
+            <li><strong>Techniques Used:</strong> Collaborative Filtering, Content-Based Filtering, IMDb, TMDB</li>
+            <li><strong>Model Performance:</strong></li>
+            <ul>
+                <li>KNNWithZScore: RMSE 1.039</li>
+                <li>BaselineOnly: RMSE 0.974</li>
+                <li>SVD: RMSE 0.971</li>
+                <li>SVDpp: RMSE 0.968</li>
+                <li>CoClustering: RMSE 1.121</li>
+            </ul>
+        </ul>
+
+        <h3>2. Climate Change Sentiment Analysis</h3>
+        <p><strong>Problem Statement:</strong> This project focuses on developing a Machine Learning model capable of classifying an individual's belief in climate change based on their tweets. The objective was to categorize sentiments into classes such as Pro, Neutral, Anti, and News, providing businesses with a comprehensive overview of public sentiment.</p>
+
+        <ul>
+            <li><strong>Techniques Used:</strong> Natural Language Processing (NLP), Sentiment Classification</li>
+            <li><strong>Model Performance:</strong></li>
+            <ul>
+                <li>Multinomial Naive Bayes: Accuracy 67.92%</li>
+                <li>Logistic Regression: Accuracy 73.20%</li>
+                <li>Support Vector Machine: Accuracy 74.08%</li>
+                <li>Random Forest: Accuracy 71.24%</li>
+                <li>SGD Classifier: Accuracy 71.74%</li>
+                <li>Ridge Classifier: Accuracy 73.96%</li>
+            </ul>
+        </ul>
+    </section>
+
+    <section class="skills">
+        <h2>Skills & Tools</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, SQL, JS</li>
+            <li><strong>Machine Learning & Data Science:</strong> Predictive Modeling (Scikit-learn), NLP, Data Wrangling (Pandas, Numpy), Data Visualization (Matplotlib, Seaborn), ETL Processes, Cloud Computing (AWS)</li>
+            <li><strong>Other Tools:</strong> Git & GitHub, Apache Airflow, Jupyter Notebooks, PostgreSQL, Microsoft Excel</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sino-z">Sinothabo Zwane</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Siino-Z">Sinothabo's GitHub</a></li>
+            <li><strong>Email:</strong> <a href="mailto:sinothaboz@gmail.com">sinothaboz@gmail.com</a></li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>Thank you for visiting my portfolio!</p>
+</footer>
+
 </body>
 </html>
