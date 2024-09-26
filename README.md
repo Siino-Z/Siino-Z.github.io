@@ -5,11 +5,11 @@ Welcome to my Data Science and Analytics portfolio. Here, I showcase my projects
 ## About Me
 I am an emerging Data Scientist with a passion for translating raw data into actionable insights. I have a background in Medical Science and Data Science, combining scientific knowledge with analytical expertise. My career is centered around research, innovation, and data-driven decision-making.
 
-During my journey, I have honed my skills in predictive modeling, data analysis, and cloud computing, and I'm particularly passionate about using data to inform policy and drive research excellence.
+My true passion lies in innovation. I aim to create solutions that solve problems across various industries. Ultimately, I want to contribute to improving the lives of South Africans, which also drives my deep interest in policy and research.
 
 ## Projects
 
-### 1. Movie Recommendation System - [Link to Project]
+### 1. Movie Recommendation System - [https://github.com/Siino-Z/Movie-Recommender-Engine]
 **Problem Statement:**  
 The challenge was to construct a recommendation algorithm capable of accurately predicting how a user will rate a movie they have not yet viewed based on their historical preferences. Leveraging the enriched MovieLens dataset, augmented with additional metadata and user-generated tags, I developed a robust recommendation system that enhances content discovery and user satisfaction.
 
@@ -35,7 +35,7 @@ The challenge was to construct a recommendation algorithm capable of accurately 
 - **Technologies Used:**
   - Python, scikit-learn, Surprise, IMDb API, TMDB API
 
-### 2. Climate Change Sentiment Analysis - [Link to Project]
+### 2. Climate Change Sentiment Analysis - [https://github.com/Siino-Z/Climate-Change-Sentiment-Analysis)]
 **Problem Statement:**  
 This project focuses on developing a robust Machine Learning model capable of classifying an individual's belief in climate change based on their tweets. The objective was to categorize sentiments into classes such as Pro, Neutral, Anti, and News, providing businesses with a comprehensive overview of public sentiment.
 
@@ -67,7 +67,7 @@ This project focuses on developing a robust Machine Learning model capable of cl
 ### Programming Languages:
 - Python
 - SQL
-- R
+- JavaScript
 
 ### Machine Learning & Data Science:
 - Predictive Modeling (Scikit-learn)
