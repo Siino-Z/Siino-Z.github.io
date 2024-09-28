@@ -44,68 +44,96 @@
             font-weight: 500;
             color: #555;
         }
+        /* Intro Section */
         .intro-section {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
             align-items: center;
-            padding: 80px 40px;
             background-color: #f9fafb;
         }
-        .intro-section div {
-            max-width: 50%;
+        .intro-text {
+            max-width: 600px;
+            padding-left: 50px;
         }
-        .intro-section h2 {
-            font-size: 2.5rem;
+        .intro-text h1 {
+            font-size: 3.5rem;
             color: #333;
+            line-height: 1.2;
         }
-        .intro-section p {
+        .intro-text p {
             font-size: 1.2rem;
-            margin-top: 20px;
             color: #666;
+            margin-top: 20px;
         }
-        .intro-section img {
-            width: 300px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .intro-text span {
+            color: #4a90e2;
         }
-        .button {
+        .intro-text .btn {
             background-color: #4a90e2;
             color: white;
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            display: inline-block;
             margin-top: 20px;
+            display: inline-block;
         }
+        .intro-image {
+            background-image: url(https://media.licdn.com/dms/image/v2/D4D03AQF966HpWqIYZA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727372250871?e=1732752000&v=beta&t=b6C8-fiOe985VPEws4JsknR2FOESvxEjUlBwDIJgb7A');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+        }
+
+        /* Areas of Interest */
         .areas-of-interest {
             text-align: center;
             padding: 60px 40px;
         }
         .areas-of-interest h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #333;
             margin-bottom: 40px;
         }
         .interest-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            padding: 0 40px;
         }
-        .interest-grid div {
-            background: white;
+        .interest {
+            background-color: white;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .interest-grid h3 {
+        .interest h3 {
             font-size: 1.5rem;
             color: #4a90e2;
             margin-bottom: 10px;
         }
-        .interest-grid p {
+        .interest p {
             color: #666;
         }
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+            color: #4a90e2;
+        }
+        .icon.machine-learning:before {
+            content: "⚙️";
+        }
+        .icon.data-analytics:before {
+            content: "👁️";
+        }
+        .icon.cloud-compute:before {
+            content: "☁️";
+        }
+        .icon.nlp:before {
+            content: "❤️";
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -127,29 +155,39 @@
     </nav>
 </header>
 
+<!-- Intro Section -->
 <section class="intro-section">
-    <div>
-        <h2>I am Sinothabo Zwane</h2>
-        <p>Data Scientist | Data Analyst | Research & Innovation</p>
-        <a href="#projects" class="button">My Projects</a>
+    <div class="intro-text">
+        <h1>I am<br><span>Sinothabo Zwane</span></h1>
+        <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems. My expertise spans machine learning, data analytics, and cloud computing.</p>
+        <a href="#projects" class="btn">My Projects</a>
     </div>
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEPFuu4MvMZow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720601049248?e=1732752000&v=beta&t=0URgycvy15YNyU1p_sqalSWbDxN4_sJMds2srZiTNSk" alt="Profile Image">
+    <div class="intro-image"></div>
 </section>
 
+<!-- Areas of Interest Section -->
 <section class="areas-of-interest">
     <h2>Areas of Interest</h2>
     <div class="interest-grid">
-        <div>
-            <h3>Cloud Computing</h3>
-            <p>I maintain servers for database storage, model training, and model deployment.</p>
-        </div>
-        <div>
-            <h3>NLP</h3>
-            <p>Applying Natural Language Processing to make sense of the motivations behind human interactions.</p>
-        </div>
-        <div>
+        <div class="interest">
+            <i class="icon machine-learning"></i>
             <h3>Machine Learning</h3>
-            <p>Developing and implementing machine learning models using modern libraries like Scikit-Learn.</p>
+            <p>With machine learning, I'm not just building models—I'm unleashing the power of data to predict trends, optimize decisions, and create magic that transforms industries.</p>
+        </div>
+        <div class="interest">
+            <i class="icon data-analytics"></i>
+            <h3>Data Analytics</h3>
+            <p>From raw data to actionable insights, I wield Python, R, and SQL like a wizard, turning numbers into stories that guide strategic decisions and shape the future.</p>
+        </div>
+        <div class="interest">
+            <i class="icon cloud-compute"></i>
+            <h3>Cloud Compute</h3>
+            <p>Experienced in building resilient solutions with AWS. Committed to continuous learning and practical application of cloud technologies.</p>
+        </div>
+        <div class="interest">
+            <i class="icon nlp"></i>
+            <h3>Natural Language Processing</h3>
+            <p>In the realm of NLP, I unravel the mysteries of language, extracting insights from text data with tools like NLTK and spaCy. It’s not just analysis—it’s a journey through the nuances of human expression.</p>
         </div>
     </div>
 </section>
@@ -160,5 +198,6 @@
 
 </body>
 </html>
+
 
 
