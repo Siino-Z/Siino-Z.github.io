@@ -22,17 +22,22 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #0e1a40; /* Starry night background */
+            color: #fff;
+            background-image: url('https://source.unsplash.com/1600x900/?starry-night-sky'); /* Background image for starry night sky */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent header */
             padding: 20px 40px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         header h1 {
             font-size: 2rem;
             font-weight: 700;
+            color: #fff;
             display: inline;
         }
         header nav {
@@ -42,7 +47,7 @@
             margin-left: 20px;
             text-decoration: none;
             font-weight: 500;
-            color: #555;
+            color: #ccc;
         }
         /* Intro Section */
         .intro-section {
@@ -50,20 +55,37 @@
             grid-template-columns: 1fr 1fr;
             height: 100vh;
             align-items: center;
-            background-color: #f9fafb;
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for the starry sky */
+            z-index: -1;
         }
         .intro-text {
             max-width: 600px;
             padding-left: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
         .intro-text h1 {
             font-size: 3.5rem;
-            color: #333;
+            color: #fff;
             line-height: 1.2;
         }
         .intro-text p {
             font-size: 1.2rem;
-            color: #666;
+            color: #ccc;
             margin-top: 20px;
         }
         .intro-text span {
@@ -79,10 +101,12 @@
             display: inline-block;
         }
         .intro-image {
-            background-image: url('https://github.com/Siino-Z/Siino-Z.github.io/blob/main/rw_20240730004153_110419_fdde2_rw-0-20240729817b4d1ab74a7954f6285034.jpg');
+            background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQEPFuu4MvMZow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720601049248?e=1732752000&v=beta&t=0URgycvy15YNyU1p_sqalSWbDxN4_sJMds2srZiTNSk');
             background-size: cover;
             background-position: center;
             height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Areas of Interest */
@@ -92,7 +116,7 @@
         }
         .areas-of-interest h2 {
             font-size: 2.5rem;
-            color: #333;
+            color: #fff;
             margin-bottom: 40px;
         }
         .interest-grid {
@@ -102,10 +126,11 @@
             padding: 0 40px;
         }
         .interest {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px); /* Frosted glass */
         }
         .interest h3 {
             font-size: 1.5rem;
@@ -113,7 +138,7 @@
             margin-bottom: 10px;
         }
         .interest p {
-            color: #666;
+            color: #ccc;
         }
         .icon {
             font-size: 2rem;
@@ -121,23 +146,49 @@
             display: block;
             color: #4a90e2;
         }
-        .icon.machine-learning:before {
-            content: "⚙️";
-        }
-        .icon.data-analytics:before {
-            content: "👁️";
-        }
-        .icon.cloud-compute:before {
-            content: "☁️";
-        }
-        .icon.nlp:before {
-            content: "❤️";
-        }
 
+        /* Projects Section */
+        .projects-section {
+            text-align: center;
+            padding: 60px 40px;
+        }
+        .projects-section h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 40px;
+        }
+        .project {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px); /* Frosted glass */
+            position: relative;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .project h3 {
+            font-size: 1.5rem;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        .project p {
+            color: #ccc;
+        }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #111;
             color: white;
             margin-top: 40px;
         }
@@ -158,7 +209,7 @@
 <!-- Intro Section -->
 <section class="intro-section">
     <div class="intro-text">
-        <h1>Hello!<br><span>I'm Sino</span></h1>
+        <h1>Hi!<br><span>I'm Sino</span></h1>
         <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems. My expertise spans machine learning, data analytics, and cloud computing.</p>
         <a href="#projects" class="btn">My Projects</a>
     </div>
@@ -170,24 +221,51 @@
     <h2>Areas of Interest</h2>
     <div class="interest-grid">
         <div class="interest">
-            <i class="icon machine-learning"></i>
+            <i class="icon">⚙️</i>
             <h3>Machine Learning</h3>
             <p>With machine learning, I'm not just building models—I'm unleashing the power of data to predict trends, optimize decisions, and create magic that transforms industries.</p>
         </div>
         <div class="interest">
-            <i class="icon data-analytics"></i>
+            <i class="icon">👁️</i>
             <h3>Data Analytics</h3>
             <p>From raw data to actionable insights, I wield Python, R, and SQL like a wizard, turning numbers into stories that guide strategic decisions and shape the future.</p>
         </div>
         <div class="interest">
-            <i class="icon cloud-compute"></i>
+            <i class="icon">☁️</i>
             <h3>Cloud Compute</h3>
             <p>Experienced in building resilient solutions with AWS. Committed to continuous learning and practical application of cloud technologies.</p>
         </div>
         <div class="interest">
-            <i class="icon nlp"></i>
+            <i class="icon">❤️</i>
             <h3>Natural Language Processing</h3>
             <p>In the realm of NLP, I unravel the mysteries of language, extracting insights from text data with tools like NLTK and spaCy. It’s not just analysis—it’s a journey through the nuances of human expression.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project">
+            <img src="https://source.unsplash.com/300x200/?data" alt="Project 1">
+            <h3>Project 1: Predictive Model</h3>
+            <p>Developed a predictive model using machine learning to forecast sales based on historical data and external factors.</p>
+        </div>
+        <div class="project">
+            <img src="https://source.unsplash.com/300x200/?analytics" alt="Project 2">
+            <h3>Project 2: Data Dashboard</h3>
+            <p>Created an interactive data dashboard using Python and Plotly to visualize key metrics and trends for a retail business.</p>
+        </div>
+        <div class="project">
+            <img src="https://source.unsplash.com/300x200/?cloud" alt="Project 3">
+            <h3>Project 3: Cloud Computing</h3>
+            <p>Designed and deployed a scalable cloud solution on AWS to handle large datasets efficiently.</p>
+        </div>
+        <div class="project">
+            <img src="https://source.unsplash.com/300x200/?nlp" alt="Project 4">
+            <h3>Project 4: NLP Sentiment Analysis</h3>
+            <p>Performed sentiment analysis on social media data using NLP techniques, providing valuable insights for brand perception.</p>
         </div>
     </div>
 </section>
@@ -198,6 +276,7 @@
 
 </body>
 </html>
+
 
 
 
