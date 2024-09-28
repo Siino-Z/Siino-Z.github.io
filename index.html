@@ -58,6 +58,7 @@
             background-color: transparent;
             position: relative;
             z-index: 1;
+            gap: 20px; /* Space between the two columns */
         }
         .intro-section::before {
             content: '';
@@ -71,7 +72,6 @@
         }
         .intro-text {
             max-width: 600px;
-            padding-left: 50px;
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px); /* Frosted glass effect */
             padding: 20px;
@@ -100,12 +100,21 @@
             margin-top: 20px;
             display: inline-block;
         }
+        .intro-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            height: auto;
+        }
         .intro-image {
-            background-image: url('IMG-20240827-WA0005-removebg-preview.png'); /* Local image in root directory */
-            background-size: cover;
-            background-size: cover;
-            background-position: center;
-            height: 100%;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
@@ -210,11 +219,13 @@
 <!-- Intro Section -->
 <section class="intro-section">
     <div class="intro-text">
-        <h1>Hi!<br><span>I'm Sino</span></h1>
+        <h1>Hello!<br><span>I'm Sino</span></h1>
         <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems. My expertise spans machine learning, data analytics, and cloud computing.</p>
         <a href="#projects" class="btn">My Projects</a>
     </div>
-    <div class="intro-image"></div>
+    <div class="intro-image-container">
+        <img src="IMG-20240827-WA0005-removebg-preview.png" alt="Sinothabo Zwane Image" class="intro-image">
+    </div>
 </section>
 
 <!-- Areas of Interest Section -->
@@ -249,23 +260,23 @@
     <h2>Projects</h2>
     <div class="project-grid">
         <div class="project">
-            <img src="https://source.unsplash.com/300x200/?data" alt="Project 1">
-            <h3>Project 1: Predictive Model</h3>
+            <img src="Project 1b.PNG" alt="Project 1">
+            <h3>Project 1: Predictive Maintenance Tool</h3>
             <p>Developed a predictive model using machine learning to forecast sales based on historical data and external factors.</p>
         </div>
         <div class="project">
-            <img src="https://source.unsplash.com/300x200/?analytics" alt="Project 2">
-            <h3>Project 2: Data Dashboard</h3>
+            <img src="Project 2.PNG" alt="Project 2">
+            <h3>Project 2: Movie Recommandation Engine</h3>
             <p>Created an interactive data dashboard using Python and Plotly to visualize key metrics and trends for a retail business.</p>
         </div>
         <div class="project">
-            <img src="https://source.unsplash.com/300x200/?cloud" alt="Project 3">
-            <h3>Project 3: Cloud Computing</h3>
+            <img src="Project 3.png" alt="Project 3">
+            <h3>Project 3: NLP Sentiment Analysis</h3>
             <p>Designed and deployed a scalable cloud solution on AWS to handle large datasets efficiently.</p>
         </div>
         <div class="project">
-            <img src="https://source.unsplash.com/300x200/?nlp" alt="Project 4">
-            <h3>Project 4: NLP Sentiment Analysis</h3>
+            <img src="Project 4.PNG" alt="Project 4">
+            <h3>Project 4: Electricity Consumption Analysis</h3>
             <p>Performed sentiment analysis on social media data using NLP techniques, providing valuable insights for brand perception.</p>
         </div>
     </div>
