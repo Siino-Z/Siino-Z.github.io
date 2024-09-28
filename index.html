@@ -61,6 +61,8 @@
         }
         
         .intro-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            align-items: center; /* Center items vertically */
             background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
             backdrop-filter: blur(15px); /* Frosted glass effect */
             padding: 40px;
@@ -70,6 +72,10 @@
             position: relative; /* Relative positioning */
             max-width: 800px; /* Max width for the container */
             transition: background-color 0.3s ease; /* Smooth transition for fading effect */
+        }
+        
+        .intro-content {
+            max-width: 60%; /* Limit the width of the text content */
         }
         
         .intro-container h1 {
@@ -99,12 +105,12 @@
         }
         
         .intro-image {
-            max-width: 300px; /* Set max width for the image */
+            max-width: 200px; /* Set max width for the image */
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 50%; /* Create an oval shape */
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-            margin-top: 20px; /* Space between text and image */
+            margin-left: 20px; /* Space between text and image */
         }
 
         /* Areas of Interest */
@@ -199,19 +205,19 @@
     <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Portfolio</a>
+        <a href="#">Resume</a>
         <a href="#">Contact</a>
     </nav>
 </header>
 
 <!-- Intro Section -->
 <section class="intro-section">
-    <div class="intro-text">
-        <h1>Hello!<br><span>I'm Sino</span></h1>
-        <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems. My expertise spans machine learning, data analytics, and cloud computing.</p>
-        <a href="#projects" class="btn">My Projects</a>
-    </div>
-    <div class="intro-image-container">
+    <div class="intro-container">
+        <div class="intro-content">
+            <h1>Hello!<br><span>I'm Sino</span></h1>
+            <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems.<br><span>My expertise spans machine learning, data analytics, and cloud computing.</p>
+            <a href="#projects" class="btn">My Projects</a>
+        </div>
         <img src="IMG-20240827-WA0005-removebg-preview.png" alt="Sinothabo Zwane Image" class="intro-image">
     </div>
 </section>
