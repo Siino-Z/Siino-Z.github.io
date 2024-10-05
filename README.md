@@ -1,4 +1,4 @@
-# Sinothabo Zwane's Data Science / Analytics Portfolio
+# Sinothabo Zwane's Data Analytics Portfolio
 
 Welcome to my Data Science and Analytics portfolio. Here, I showcase my projects, skills, and experiences in data science, machine learning, and analytics. This site is hosted using GitHub Pages and built with the [GitHub Pages template](https://pages.github.com/).
 
