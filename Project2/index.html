@@ -3,16 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project : Movie Recommendation Engine</title>
-    <link href="../css/styles.css" rel="stylesheet"> <!-- Link your main CSS file -->
+    <title>Project: Movie Recommendation Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            max-width: 900px; /* Adjust width here */
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+        img {
+            border-radius: 8px;
+            margin: 20px 0;
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Movie Recommendation Engine</h1>
     </header>
     <main>
-        <p>Built a movie recommendation system that predicts user ratings using machine learning models to enhance personalized content suggestions.</p>
-        <!-- You can add screenshots, graphs, or live app embeds here -->
+        <!-- Project Overview -->
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                This project showcases my proficiency in developing a machine learning recommendation system to predict user ratings for movies 
+                based on their historical interactions. The primary objective was to enhance personalized movie recommendations for users, 
+                similar to systems used by streaming giants like Netflix and Amazon Prime.
+            </p>
+            <ul>
+                <li><strong>Dataset Used:</strong> <a href="https://grouplens.org/datasets/movielens/">MovieLens Dataset</a></li>
+                <li><strong>Challenge:</strong> Predict how users will rate movies they haven't seen using collaborative and content-based filtering methods.</li>
+            </ul>
+        </section>
+
+        <!-- Technical Workflow -->
+        <section>
+            <h2>Technical Workflow</h2>
+
+            <!-- Data Wrangling and Exploration -->
+            <div>
+                <h3>1. Data Wrangling and Exploration</h3>
+                <p><strong>Skills Demonstrated:</strong> Data Preprocessing, Feature Selection, Exploratory Data Analysis (EDA)</p>
+                <p>
+                    The initial phase involved handling large-scale datasets, merging information across multiple sources, and cleaning up irregularities like 
+                    missing data. Key transformations included cleaning and normalizing user ratings, and extracting relevant metadata like movie genres, release dates, 
+                    and actors.
+                </p>
+                <p><strong>Key Insights:</strong> Genre-based preferences, skewed ratings distributions.</p>
+            </div>
+
+            <!-- Feature Engineering -->
+            <div>
+                <h3>2. Feature Engineering</h3>
+                <p><strong>Skills Demonstrated:</strong> Feature Engineering, Data Augmentation</p>
+                <p>
+                    I engineered features like average ratings per genre and user biases, helping the model align recommendations with user preferences. 
+                    Temporal trends were also incorporated to enhance predictions.
+                </p>
+            </div>
+
+            <!-- Model Development -->
+            <div>
+                <h3>3. Model Development</h3>
+                <p><strong>Skills Demonstrated:</strong> Collaborative Filtering, Content-Based Filtering, Hybrid Modeling</p>
+                <ul>
+                    <li><strong>Collaborative Filtering:</strong> Used kNN, SVD, and SVD++ to recommend movies based on user-item interactions.</li>
+                    <li><strong>Content-Based Filtering:</strong> Built recommendations using movie metadata such as genres and cast.</li>
+                    <li><strong>Hybrid Model:</strong> Combined collaborative and content-based methods for more robust predictions.</li>
+                </ul>
+            </div>
+
+            <!-- Model Performance -->
+            <div>
+                <h3>4. Evaluation and Results</h3>
+                <p><strong>Skills Demonstrated:</strong> Model Evaluation, Hyperparameter Tuning, Visualization</p>
+                <p>Evaluated the models using RMSE to quantify prediction accuracy. The best-performing algorithm was Co-Clustering, with an RMSE of *1.13*.</p>
+                <img src="path-to-your-image.png" alt="Model Performance Comparison" style="max-width: 100%; height: auto;">
+                <p>
+                    The models were evaluated using RMSE, with Co-Clustering performing best in minimizing prediction error, followed by SVD++.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Insights and Skills -->
+        <section>
+            <h2>Key Insights & Skills Learned</h2>
+            <ul>
+                <li>Data manipulation and preprocessing for large datasets</li>
+                <li>Collaborative filtering, content-based filtering, and matrix factorization methods</li>
+                <li>Feature engineering, including temporal trends and user biases</li>
+                <li>Model evaluation using RMSE and hyperparameter tuning</li>
+                <li>Visualization with Seaborn and Matplotlib for deep data analysis</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+            <h2>Conclusion & Next Steps</h2>
+            <p>
+                The Movie Recommendation Engine successfully predicted user ratings with high accuracy. Co-Clustering emerged as the best-performing model, 
+                reducing RMSE significantly. Moving forward, the next steps include hyperparameter tuning and experimenting with deep learning models like 
+                neural collaborative filtering to further enhance performance.
+            </p>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2024 Sinothabo Zwane. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
