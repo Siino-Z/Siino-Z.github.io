@@ -24,16 +24,19 @@
         line-height: 1.6;
         background-color: #0e1a40; /* Starry night background */
         color: #fff;
-        background-image: url('3d-tech-background-with-plexus-design.jpg'); /* Photo by Freepik <a href="https://www.freepik.com"</a> */
-        background-size: auto; /* Let the image keep its original size */
-        background-position: top left; /* Start the image from the top-left corner */
-        background-repeat: repeat; /* Tile the image across the entire background */
-        background-attachment: scroll; /* Keep the background fixed on scroll */
+        background-image: url('3d-tech-background-with-plexus-design.jpg'); /* Photo by Freepik */
+        background-size: cover; /* Cover the background across the entire page */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     header {
         background-color: rgba(255, 255, 255, 0.1); /* Transparent header */
         padding: 20px 40px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        z-index: 10;
     }
     header h1 {
         font-size: 2rem;
@@ -50,31 +53,24 @@
         font-weight: 500;
         color: #ccc;
     }
+
     /* Intro Section */
     .intro-section {
         display: flex;
-        justify-content: space-between; /* Push text and image to opposite ends */
+        justify-content: space-between;
         align-items: center;
         height: 100vh;
-        background-color: transparent;
+        padding: 0 40px;
         position: relative;
-        z-index: 1;
-        padding: 0 40px; /* Add padding to the sides */
     }
 
     .intro-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Align text to the start of the container */
-        max-width: 50%; /* Take up 50% of the width for text */
-        background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
-        backdrop-filter: blur(15px); /* Frosted glass effect */
+        max-width: 50%; /* Set the width of text container */
+        background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
         padding: 40px;
         border-radius: 20px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-        text-align: left; /* Align text to the left */
-        position: relative;
-        transition: background-color 0.3s ease;
+        z-index: 1;
     }
 
     .intro-container h1 {
@@ -90,10 +86,6 @@
         margin-bottom: 20px;
     }
 
-    .intro-container span {
-        color: #4a90e2;
-    }
-
     .intro-container .btn {
         background-color: #4a90e2;
         color: white;
@@ -101,34 +93,36 @@
         border-radius: 4px;
         text-decoration: none;
         margin-top: 20px;
-        display: inline-block;
     }
 
     .intro-image {
-        max-width: 45%; /* Take up 45% of the width for the image */
+        max-width: 45%; /* Image takes up 45% of the width */
         height: auto;
-        border-radius: 10px; /* Slight border radius for image */
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-        margin-left: 20px; /* Space between text and image */
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        margin-left: 20px;
     }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
         .intro-section {
-            flex-direction: column; /* Stack content vertically on smaller screens */
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
-    }
+        }
+
         .intro-container {
-            max-width: 100%; /* Make the text container full width */
-            margin-bottom: 20px; /* Add space between text and image */
-            align-items: center;
-            text-align: center; /* Center text for smaller screens */
-    }
+            max-width: 90%; /* Take up most of the screen width */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         .intro-image {
             max-width: 80%; /* Reduce image size on smaller screens */
-            margin: 0 auto; /* Center the image */
+            margin: 20px auto;
+        }
     }
-    
+
     /* Areas of Interest */
     .areas-of-interest {
         text-align: center;
@@ -160,12 +154,6 @@
     .interest p {
         color: #ccc;
     }
-    .icon {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        display: block;
-        color: #4a90e2;
-    }
 
     /* Projects Section */
     .projects-section {
@@ -188,41 +176,16 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px); /* Frosted glass */
-        position: relative;
     }
     .project img {
         width: 100%;
         height: auto;
         border-radius: 8px;
         margin-bottom: 20px;
-        transition: transform 0.3s ease; /* Add smooth zoom on hover */
-    }
-    .project h3 {
-        font-size: 1.5rem;
-        color: #4a90e2;
-        margin-bottom: 10px;
-    }
-    .project p {
-        color: #ccc;
-        opacity: 0; /* Hide the description initially */
-        transition: opacity 0.5s ease; /* Smooth fade-in transition */
+        transition: transform 0.3s ease;
     }
     .project:hover img {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-    .project:hover p {
-        opacity: 1; /* Fade in the description on hover */
-    }
-
-    /* Remove underline and focus outline from links */
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    a:focus, a:active {
-        outline: none;
-        text-decoration: none; /* Prevent underline after clicking */
+        transform: scale(1.05);
     }
 
     footer {
@@ -230,7 +193,6 @@
         padding: 20px;
         background-color: #111;
         color: white;
-        margin-top: 40px;
     }
 </style>
 
@@ -250,13 +212,11 @@
 <!-- Intro Section -->
 <section class="intro-section">
     <div class="intro-container">
-        <div class="intro-content">
-            <h1>Hello!<br><span>I'm Sino</span></h1>
-            <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems.<br><span>My expertise spans machine learning, data analytics, and cloud computing.</p>
-            <a href="#projects" class="btn">My Projects</a>
-        </div>
-        <img src="IMG-20240827-WA0005-removebg-preview.png" alt="Sinothabo Zwane Image" class="intro-image">
+        <h1>Hello!<br><span>I'm Sino</span></h1>
+        <p>I'm a data enthusiast passionate about using data to drive innovation and solve real-world problems. My expertise spans machine learning, data analytics, and cloud computing.</p>
+        <a href="#projects" class="btn">My Projects</a>
     </div>
+    <img src="IMG-20240827-WA0005-removebg-preview.png" alt="Sinothabo Zwane Image" class="intro-image">
 </section>
 
 <!-- Areas of Interest Section -->
@@ -266,69 +226,52 @@
         <div class="interest">
             <i class="icon">🧠📈</i>
             <h3>Machine Learning</h3>
-            <p>With machine learning, I'm not just building models—I'm unleashing the power of data to predict trends, optimize decisions, and create magic that transforms industries.</p>
+            <p>I'm unleashing the power of data to predict trends, optimize decisions, and create magic that transforms industries.</p>
         </div>
         <div class="interest">
             <i class="icon">📊</i>
             <h3>Data Analytics</h3>
-            <p>From raw data to actionable insights, I wield Python, R, and SQL like a wizard, turning numbers into stories that guide strategic decisions and shape the future.</p>
+            <p>From raw data to actionable insights, I turn numbers into stories that guide strategic decisions.</p>
         </div>
         <div class="interest">
             <i class="icon">☁️💻</i>
             <h3>Cloud Compute</h3>
-            <p>Experienced in building resilient solutions with AWS. Committed to continuous learning and practical application of cloud technologies.</p>
+            <p>Building resilient solutions with AWS and cloud technologies.</p>
         </div>
         <div class="interest">
             <i class="icon">🗣️💬</i>
             <h3>Natural Language Processing</h3>
-            <p>In the realm of NLP, I unravel the mysteries of language, extracting insights from text data with tools like NLTK and spaCy. It’s not just analysis—it’s a journey through the nuances of human expression.</p>
+            <p>I unravel the mysteries of language, extracting insights from text data with tools like NLTK and spaCy.</p>
         </div>
     </div>
 </section>
 
 <!-- Projects Section -->
-<section class="projects-section" id="projects">
+<section id="projects" class="projects-section">
     <h2>Projects</h2>
     <div class="project-grid">
         <div class="project">
-            <a href="Project1/index.html">
-                <img src="Project 1b.PNG" alt="Project 1">
-                <h3>Project 1: Predictive Maintenance Tool</h3>
-                <p>Developed a predictive maintenance tool and dashboard to forecast machine failures using historical data for real-time monitoring and decision-making.</p>
-            </a>
+            <img src="project1-image.jpg" alt="Project 1 Image">
+            <h3>Predictive Maintenance</h3>
+            <p>Using machine learning to forecast equipment failures before they happen, reducing downtime and saving costs.</p>
         </div>
         <div class="project">
-            <a href="Project2/index.html">
-                <img src="Project 2.PNG" alt="Project 2">
-                <h3>Project 2: Movie Recommendation Engine</h3>
-                <p>Built a movie recommendation system that predicts user ratings using machine learning models to enhance personalized content suggestions.</p>
-            </a>
+            <img src="project2-image.jpg" alt="Project 2 Image">
+            <h3>Sentiment Analysis</h3>
+            <p>Analyzed thousands of product reviews to determine customer sentiment and improve service strategies.</p>
         </div>
         <div class="project">
-            <a href="Project3/index.html">
-                <img src="Project 3.png" alt="Project 3">
-                <h3>Project 3: NLP Sentiment Analysis</h3>
-                <p>Analyzed and classified climate change-related tweet sentiments using natural language processing to provide insights into public opinion.</p>
-            </a>
-        </div>
-        <div class="project">
-            <a href="Project4/index.html">
-                <img src="Project 4.PNG" alt="Project 4">
-                <h3>Project 4: Electricity Consumption Analysis</h3>
-                <p>Extracted key insights from ESKOM electricity consumption data to inform decisions on energy usage and optimization.</p>
-            </a>
+            <img src="project3-image.jpg" alt="Project 3 Image">
+            <h3>Recommendation System</h3>
+            <p>Developed a recommendation system to suggest the best content based on user preferences.</p>
         </div>
     </div>
 </section>
 
-
+<!-- Footer -->
 <footer>
-    <p>© 2024 Sinothabo Zwane. All Rights Reserved.</p>
+    <p>&copy; 2024 Sinothabo Zwane. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
-
-
-
-
