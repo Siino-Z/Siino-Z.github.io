@@ -53,42 +53,41 @@
     /* Intro Section */
     .intro-section {
         display: flex;
-        justify-content: center;
+        justify-content: space-between; /* Push text and image to opposite ends */
         align-items: center;
         height: 100vh;
         background-color: transparent;
         position: relative;
         z-index: 1;
+        padding: 0 40px; /* Add padding to the sides */
     }
 
     .intro-container {
-        display: flex; /* Use flexbox for horizontal alignment */
-        align-items: center; /* Center items vertically */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text to the start of the container */
+        max-width: 50%; /* Take up 50% of the width for text */
         background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
         backdrop-filter: blur(15px); /* Frosted glass effect */
         padding: 40px;
         border-radius: 20px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-        text-align: center; /* Center text alignment */
-        position: relative; /* Relative positioning */
-        max-width: 900px; /* Max width for the container */
-        transition: background-color 0.3s ease; /* Smooth transition for fading effect */
-    }
-
-    .intro-content {
-        max-width: 60%; /* Limit the width of the text content */
+        text-align: left; /* Align text to the left */
+        position: relative;
+        transition: background-color 0.3s ease;
     }
 
     .intro-container h1 {
         font-size: 3.5rem;
         color: #fff;
         line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .intro-container p {
         font-size: 1.2rem;
         color: #ccc;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .intro-container span {
@@ -106,15 +105,30 @@
     }
 
     .intro-image {
-        max-width: 300px; /* Set max width for the image */
-        width: auto; /* Maintain original width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 0; /* No border radius */
-        box-shadow: none; /* Remove shadow */
+        max-width: 45%; /* Take up 45% of the width for the image */
+        height: auto;
+        border-radius: 10px; /* Slight border radius for image */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
         margin-left: 20px; /* Space between text and image */
-        display: block; /* Ensure the image is a block element */
     }
 
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .intro-section {
+            flex-direction: column; /* Stack content vertically on smaller screens */
+            text-align: center;
+    }
+        .intro-container {
+            max-width: 100%; /* Make the text container full width */
+            margin-bottom: 20px; /* Add space between text and image */
+            align-items: center;
+            text-align: center; /* Center text for smaller screens */
+    }
+        .intro-image {
+            max-width: 80%; /* Reduce image size on smaller screens */
+            margin: 0 auto; /* Center the image */
+    }
+    
     /* Areas of Interest */
     .areas-of-interest {
         text-align: center;
