@@ -467,6 +467,10 @@
             <div>
               <h4 class="title">AWS Certified Cloud Practitioner</h4>
               <p class="description">Currently studying for AWS Certified Cloud Practitioner certification to strengthen my foundation in cloud infrastructure and services.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 10%;" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Started</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
     
@@ -476,6 +480,10 @@
             <div>
               <h4 class="title">Machine Learning Specialization</h4>
               <p class="description">Enrolled in a machine learning specialization course to enhance my skills in deep learning frameworks, including TensorFlow and PyTorch.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 20%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Long way to go</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
     
@@ -485,6 +493,10 @@
             <div>
               <h4 class="title">SQL for Data Science</h4>
               <p class="description">Expanding my SQL knowledge for advanced data manipulation and analysis, including complex joins and subqueries.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Halfway through</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
     
@@ -494,6 +506,10 @@
             <div>
               <h4 class="title">Microsoft Azure Fundamentals</h4>
               <p class="description">Exploring Azure cloud services to broaden my multi-cloud skills and capabilities, focusing on Azure storage and compute services.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 10%;" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Still planning to start</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
     
@@ -502,6 +518,10 @@
             <div>
               <h4 class="title">Python for Data Engineering</h4>
               <p class="description">Learning data engineering concepts with Python to enhance ETL pipelines and workflow automation for data science projects.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Almost done</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
     
@@ -510,8 +530,13 @@
             <div>
               <h4 class="title">Big Data Technologies</h4>
               <p class="description">Studying big data technologies, including Hadoop and Spark, to work with large datasets efficiently and apply data processing techniques.</p>
+              <!-- Progress Bar -->
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 100%;" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Complete</div>
+              </div>
             </div>
           </div><!-- End Learning Item -->
+    
         </div>
       </div>
     </section><!-- /Learning Corner Section -->
@@ -553,7 +578,7 @@
   
   <script>
   // JavaScript to fetch latest tech news from The Guardian API
-  fetch('https://content.guardianapis.com/search?section=technology&api-key=2058aad734f248b6a13841adc788d2d2')
+  fetch('https://content.guardianapis.com/search?section=technology&api-key=66e51851-c030-4bd9-8aa5-75f3af9f9888')
     .then(response => response.json())
     .then(data => {
       const newsContainer = document.getElementById('news-slides');
