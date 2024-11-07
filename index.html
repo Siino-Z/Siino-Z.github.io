@@ -551,6 +551,7 @@
         const newsContainer = document.getElementById('news-slides');
         newsContainer.innerHTML = ''; // Clear placeholder content
     
+        // Ensure that articles are in the expected format
         data.articles.forEach((article, index) => {
           const isActive = index === 0 ? 'active' : '';
           const newsSlide = `
@@ -563,6 +564,10 @@
             </div>`;
           newsContainer.insertAdjacentHTML('beforeend', newsSlide);
         });
+    
+        // Reinitialize the carousel to ensure it picks up the new content
+        const myCarousel = new bootstrap.Carousel(document.getElementById('newsCarousel'));
+        myCarousel.refresh(); // Refresh the carousel with new content
       })
       .catch(error => {
         document.getElementById('news-slides').innerHTML = `<div class="carousel-item active">
