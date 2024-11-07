@@ -511,91 +511,73 @@
       </div>
     </section><!-- /Learning Corner Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
+    <!-- Latest News and Trends in Tech Section -->
+    <section id="latest-news" class="latest-news section">
+    
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Latest News and Trends in Tech</h2>
+        <p>Stay updated with the latest happenings in technology, curated from reliable sources.</p>
       </div><!-- End Section Title -->
-
+    
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- News Slider -->
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="news-slides">
+            <!-- Placeholder while loading -->
+            <div class="carousel-item active">
+              <div class="d-flex flex-column align-items-center">
+                <h4>Loading latest news...</h4>
+                <p>Fetching data, please wait...</p>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
+    
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    
+    </section><!-- /Latest News Section -->
+    
+    <script>
+    // JavaScript to fetch latest tech news using the provided API key
+    fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=2058aad734f248b6a13841adc788d2d2')
+      .then(response => response.json())
+      .then(data => {
+        const newsContainer = document.getElementById('news-slides');
+        newsContainer.innerHTML = ''; // Clear placeholder content
+    
+        data.articles.forEach((article, index) => {
+          const isActive = index === 0 ? 'active' : '';
+          const newsSlide = `
+            <div class="carousel-item ${isActive}">
+              <div class="d-flex flex-column align-items-center">
+                <h4>${article.title}</h4>
+                <p>${article.description || 'No description available'}</p>
+                <a href="${article.url}" target="_blank" class="btn btn-primary">Read More</a>
+              </div>
+            </div>`;
+          newsContainer.insertAdjacentHTML('beforeend', newsSlide);
+        });
+      })
+      .catch(error => {
+        document.getElementById('news-slides').innerHTML = `<div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center">
+            <h4>Error Loading News</h4>
+            <p>Please try again later.</p>
+          </div>
+        </div>`;
+        console.error('Error fetching news:', error);
+      });
+    </script>
 
   </main>
 
