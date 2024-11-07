@@ -295,17 +295,27 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Here is an overview of my professional experience, education, and key projects that demonstrate my skills in data science, machine learning, and cloud computing.</p>
       </div><!-- End Section Title -->
     
       <div class="container">
     
         <div class="row">
     
+          <!-- Left Column: Summary -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            
+            <div class="resume-item">
+              <p><strong>Sinothabo Zwane</strong></p>
+              <p>Energetic emerging data scientist with a strong foundation in analytics and a growing passion for cloud computing. Skilled in Statistical Analysis, Python, SQL, and data visualization, with hands-on experience in AWS and a focus on expanding my expertise in Machine Learning and Cloud Engineering.</p>
+            </div>
+          </div><!-- End Left Column -->
+          
           <!-- Left Column: Education -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Education</h3>
-    
+          
             <div class="resume-item">
               <h4>Certificate in Information Technology: Systems Development (NQF 5)</h4>
               <h5>June 2024</h5>
@@ -319,6 +329,7 @@
               <p>Major: Physiology; Minors: Microbiology and Biochemistry.</p>
             </div>
           </div><!-- End Left Column -->
+
     
           <!-- Right Column: Work History -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -507,78 +518,78 @@
       </div>
     </section><!-- /Learning Corner Section -->
 
-    <!-- Latest News and Trends in Tech Section -->
-    <section id="latest-news" class="latest-news section">
-    
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Latest News and Trends in Tech</h2>
-        <p>Stay updated with the latest happenings in technology, curated from reliable sources.</p>
-      </div><!-- End Section Title -->
-    
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <!-- News Slider -->
-        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" id="news-slides">
-            <!-- Placeholder while loading -->
-            <div class="carousel-item active">
-              <div class="d-flex flex-column align-items-center">
-                <h4>Loading latest news...</h4>
-                <p>Fetching data, please wait...</p>
-              </div>
-            </div>
+<!-- Latest News and Trends in Tech Section -->
+<section id="latest-news" class="latest-news section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Latest News and Trends in Tech</h2>
+    <p>Stay updated with the latest happenings in technology, curated from reliable sources.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- News Slider -->
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="news-slides">
+        <!-- Placeholder while loading -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center">
+            <h4>Loading latest news...</h4>
+            <p>Fetching data, please wait...</p>
           </div>
-    
-          <!-- Carousel Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-    
-    </section><!-- /Latest News Section -->
-    
-    <script>
-    // JavaScript to fetch latest tech news using the provided API key
-    fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=2058aad734f248b6a13841adc788d2d2')
-      .then(response => response.json())
-      .then(data => {
-        const newsContainer = document.getElementById('news-slides');
-        newsContainer.innerHTML = ''; // Clear placeholder content
-    
-        // Ensure that articles are in the expected format
-        data.articles.forEach((article, index) => {
-          const isActive = index === 0 ? 'active' : '';
-          const newsSlide = `
-            <div class="carousel-item ${isActive}">
-              <div class="d-flex flex-column align-items-center">
-                <h4>${article.title}</h4>
-                <p>${article.description || 'No description available'}</p>
-                <a href="${article.url}" target="_blank" class="btn btn-primary">Read More</a>
-              </div>
-            </div>`;
-          newsContainer.insertAdjacentHTML('beforeend', newsSlide);
-        });
-    
-        // Reinitialize the carousel to ensure it picks up the new content
-        const myCarousel = new bootstrap.Carousel(document.getElementById('newsCarousel'));
-        myCarousel.refresh(); // Refresh the carousel with new content
-      })
-      .catch(error => {
-        document.getElementById('news-slides').innerHTML = `<div class="carousel-item active">
-          <div class="d-flex flex-column align-items-center">
-            <h4>Error Loading News</h4>
-            <p>Please try again later.</p>
-          </div>
-        </div>`;
-        console.error('Error fetching news:', error);
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  </section><!-- /Latest News Section -->
+  
+  <script>
+  // JavaScript to fetch latest tech news from The Guardian API
+  fetch('https://content.guardianapis.com/search?section=technology&api-key=2058aad734f248b6a13841adc788d2d2')
+    .then(response => response.json())
+    .then(data => {
+      const newsContainer = document.getElementById('news-slides');
+      newsContainer.innerHTML = ''; // Clear placeholder content
+  
+      data.response.results.forEach((article, index) => {
+        const isActive = index === 0 ? 'active' : '';
+        const imageUrl = article.fields?.thumbnail || ''; // Get image if available
+  
+        const newsSlide = `
+          <div class="carousel-item ${isActive}">
+            <div class="d-flex flex-column align-items-center">
+              ${imageUrl ? `<img src="${imageUrl}" alt="${article.webTitle}" class="img-fluid mb-3" />` : ''}
+              <h4>${article.webTitle}</h4>
+              <p>${article.fields?.trailText || 'No description available'}</p>
+              <a href="${article.webUrl}" target="_blank" class="btn btn-primary">Read More</a>
+            </div>
+          </div>`;
+        newsContainer.insertAdjacentHTML('beforeend', newsSlide);
       });
-    </script>
+  
+      const myCarousel = new bootstrap.Carousel(document.getElementById('newsCarousel'));
+      myCarousel.refresh(); // Refresh the carousel to load the items properly
+    })
+    .catch(error => {
+      console.error('Error fetching news:', error);
+      document.getElementById('news-slides').innerHTML = `<div class="carousel-item active">
+        <div class="d-flex flex-column align-items-center">
+          <h4>Error Loading News</h4>
+          <p>Please try again later.</p>
+        </div>
+      </div>`;
+    });
+  </script>
 
   </main>
 
