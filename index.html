@@ -58,17 +58,16 @@
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#My Learning Library"><i class="bi bi-hdd-stack navicon"></i> My Learning Library</a></li>
-        </li>
-        <li><a href="#Tech News"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
+  <nav id="navmenu" class="navmenu" aria-label="Primary Navigation">
+    <ul>
+      <li><a href="#hero" class="active" aria-current="page"><i class="bi bi-house navicon"></i> Home</a></li>
+      <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+      <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+      <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+      <li><a href="#learning-library"><i class="bi bi-hdd-stack navicon"></i> My Learning Library</a></li>
+      <li><a href="#tech-news"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+    </ul>
+  </nav>
 
   </header>
 
@@ -546,44 +545,43 @@
       </div>
     </section><!-- /Learning Corner Section -->
 
-<!-- Latest News and Trends in Tech Section -->
-<section id="latest-news" class="latest-news section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Latest News and Trends in Tech</h2>
-    <p>Stay updated with the latest happenings in technology, curated from reliable sources.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <!-- News Slider -->
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" id="news-slides">
-        <!-- Placeholder while loading -->
-        <div class="carousel-item active">
-          <div class="d-flex flex-column align-items-center">
-            <h4>Loading latest news...</h4>
-            <p>Fetching data, please wait...</p>
+  <!-- Latest News and Trends in Tech Section -->
+  <section id="latest-news" class="latest-news section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Latest News and Trends in Tech</h2>
+      <p>Stay updated with the latest happenings in technology, curated from reliable sources.</p>
+    </div>
+  
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- News Slider -->
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="news-slides">
+          <!-- Placeholder while loading -->
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center">
+              <h4>Loading latest news...</h4>
+              <p>Fetching data, please wait...</p>
+            </div>
           </div>
         </div>
+  
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
-
-  </section><!-- /Latest News Section -->
+  </section>
   
   <script>
   // JavaScript to fetch latest tech news from The Guardian API
-  fetch('https://content.guardianapis.com/search?section=technology&api-key=66e51851-c030-4bd9-8aa5-75f3af9f9888')
+  fetch('https://content.guardianapis.com/search?section=technology&show-fields=thumbnail,trailText&api-key=66e51851-c030-4bd9-8aa5-75f3af9f9888')
     .then(response => response.json())
     .then(data => {
       const newsContainer = document.getElementById('news-slides');
@@ -605,17 +603,18 @@
         newsContainer.insertAdjacentHTML('beforeend', newsSlide);
       });
   
+      // Initialize Bootstrap carousel after adding news items
       const myCarousel = new bootstrap.Carousel(document.getElementById('newsCarousel'));
-      myCarousel.refresh(); // Refresh the carousel to load the items properly
     })
     .catch(error => {
       console.error('Error fetching news:', error);
-      document.getElementById('news-slides').innerHTML = `<div class="carousel-item active">
-        <div class="d-flex flex-column align-items-center">
-          <h4>Error Loading News</h4>
-          <p>Please try again later.</p>
-        </div>
-      </div>`;
+      document.getElementById('news-slides').innerHTML = `
+        <div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center">
+            <h4>Error Loading News</h4>
+            <p>Please try again later.</p>
+          </div>
+        </div>`;
     });
   </script>
 
