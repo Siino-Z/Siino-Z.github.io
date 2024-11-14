@@ -86,84 +86,88 @@
       </div>
     </div>
 
-    <!-- Project Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container">
-        <!-- Introduction -->
-        <div class="row mb-4">
-          <div class="col-lg-12">
-            <h2>Project Overview</h2>
-            <p>This project focuses on developing a machine learning model to predict loan default risks. By assessing credit risk efficiently, financial institutions can make informed lending decisions and reduce potential losses.</p>
-          </div>
-        </div>
-
-        <!-- Detailed Information -->
-        <div class="row gy-4">
-          <div class="col-lg-8">
-            <!-- Slideshow or Image -->
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/20059340_6233283.jpg" alt="Credit Risk Modeling">
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <!-- Project Information -->
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category:</strong> Data Science</li>
-                <li><strong>Technologies Used:</strong> Python, Scikit-learn, Pandas</li>
-                <li><strong>Date:</strong> August 2024</li>
-                <li><strong>Project URL:</strong> <a href="#">#</a></li>
-              </ul>
-            </div>
-
-            <!-- Problem Statement -->
-            <div class="portfolio-description">
-              <h2>Problem Statement</h2>
-              <p>Financial institutions often face the challenge of determining a borrower's likelihood of default. This project addresses that challenge by developing a predictive model based on historical data.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Methodology Section -->
-        <div class="row mt-4">
-          <div class="col-lg-12">
-            <h2>Methodology</h2>
-            <p>The model was trained using a dataset of past loans, incorporating features such as income, credit history, and loan amount. Techniques such as feature engineering and hyperparameter tuning were employed for optimal performance.</p>
-          </div>
-        </div>
-
-        <!-- Results and Analysis -->
-        <div class="row mt-4">
-          <div class="col-lg-12">
-            <h2>Results and Analysis</h2>
-            <p>The model achieved an accuracy of 85% and an F1-score of 0.80, indicating strong predictive power. Key insights revealed that income and credit history were significant predictors of loan default.</p>
-          </div>
-        </div>
-
-        <!-- Challenges and Learnings -->
-        <div class="row mt-4">
-          <div class="col-lg-12">
-            <h2>Challenges and Learnings</h2>
-            <p>Challenges included dealing with imbalanced data and handling missing values. These were addressed through techniques such as SMOTE for balancing and imputation methods for missing data.</p>
-          </div>
-        </div>
-
-        <!-- Conclusion -->
-        <div class="row mt-4">
-          <div class="col-lg-12">
-            <h2>Conclusion</h2>
-            <p>This project provided valuable insights into predictive modeling for risk assessment. Future work could explore more complex models like gradient boosting and integrating external financial indicators.</p>
-          </div>
-        </div>
+  <!-- Credit Risk Modeling Project Section -->
+  <section id="project-overview" class="project-overview section">
+    <div class="container" data-aos="fade-up">
+      
+      <!-- Project Title and Summary -->
+      <h2>Credit Risk Modeling Project: German Credit Data</h2>
+      <p>This project explores credit risk modeling using the German Credit dataset. The goal was to build a model that distinguishes between "good" and "bad" credit risks to aid banks and lending institutions. Below, I present my approach, findings, and next steps.</p>
+      
+      <!-- Project Sections -->
+      
+      <!-- Data Preparation and Exploration -->
+      <h3>1. Data Preparation and Exploration</h3>
+      <p>Starting with data inspection, I reviewed both categorical and numerical features, alongside the target variable <code>Credit_risk</code> indicating credit status. Key observations:</p>
+      <ul>
+        <li><strong>Categorical Features:</strong> Includes variables like <code>Purpose</code>, <code>Housing</code>, and <code>Employment_status</code>, which reflect financial and personal details.</li>
+        <li><strong>Numerical Features:</strong> Includes <code>Duration_in_month</code>, <code>Credit_amount</code>, and <code>Age_in_years</code>, representing loan terms, amounts, and demographics.</li>
+      </ul>
+      <blockquote>
+        <strong>Example Finding:</strong> Higher-risk loans were more frequent in the <code>"new car"</code> category, while <code>"furniture"</code> loans often had good credit outcomes.
+      </blockquote>
+  
+      <!-- Placeholder for Data Preparation and Exploration Image -->
+      <div class="image-placeholder" style="background-color: #f0f0f0; height: 0; padding-bottom: 56.25%; position: relative; margin: 20px 0; border-radius: 8px;">
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #aaa; font-size: 1rem;">Image Placeholder: Data Preparation and Exploration</p>
       </div>
-    </section>
+  
+      <!-- Bivariate Analysis -->
+      <h3>2. Bivariate Analysis</h3>
+      <p>To understand feature relationships with <code>Credit_risk</code>, I conducted bivariate analysis:</p>
+      <ul>
+        <li><strong>Categorical Analysis:</strong> Chi-square tests revealed significant links between <code>Employment_status</code>, <code>Credit_history</code>, and credit risk levels.</li>
+        <li><strong>Numerical Analysis:</strong> Box plots showed that higher <code>Credit_amount</code> was associated with "bad" credit risks.</li>
+      </ul>
+  
+      <!-- Placeholder for Bivariate Analysis Image -->
+      <div class="image-placeholder" style="background-color: #f0f0f0; height: 0; padding-bottom: 56.25%; position: relative; margin: 20px 0; border-radius: 8px;">
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #aaa; font-size: 1rem;">Image Placeholder: Bivariate Analysis</p>
+      </div>
+  
+      <!-- Feature Engineering -->
+      <h3>3. Feature Engineering</h3>
+      <p>Based on insights from bivariate analysis, I engineered features to add value to the dataset:</p>
+      <ul>
+        <li><strong>Binning:</strong> Grouped <code>Age_in_years</code> and <code>Credit_amount</code> into meaningful ranges.</li>
+        <li><strong>Interaction Features:</strong> Combined features like <code>Employment_status</code> and <code>Credit_history</code> for joint effects.</li>
+        <li><strong>Encoding:</strong> Applied one-hot encoding to transform categorical features for modeling.</li>
+      </ul>
+  
+      <!-- Outlier Detection -->
+      <h3>4. Outlier Detection</h3>
+      <p>Using the Interquartile Range (IQR) method, I identified outliers that could impact model stability:</p>
+      <ul>
+        <li><strong>Credit_amount:</strong> Higher values showed a link with "bad" credit risks.</li>
+        <li><strong>Duration_in_month:</strong> Extremely short or long durations were observed in both credit risk categories.</li>
+      </ul>
+      <blockquote>
+        <strong>Next Steps:</strong> I plan to cap or transform certain features to limit outlier influence without data loss.
+      </blockquote>
+  
+      <!-- Addressing Class Imbalance -->
+      <h3>5. Addressing Class Imbalance</h3>
+      <p>With a target variable imbalance favoring "good" credit cases, I plan to use SMOTE (Synthetic Minority Over-sampling Technique) to balance the classes and improve model learning.</p>
+  
+      <!-- Placeholder for Class Imbalance Image -->
+      <div class="image-placeholder" style="background-color: #f0f0f0; height: 0; padding-bottom: 56.25%; position: relative; margin: 20px 0; border-radius: 8px;">
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #aaa; font-size: 1rem;">Image Placeholder: Addressing Class Imbalance</p>
+      </div>
+  
+      <!-- Modeling and Evaluation -->
+      <h3>6. Modeling and Evaluation (Upcoming)</h3>
+      <p>Next steps include training and evaluating models to predict credit risk. Planned approach:</p>
+      <ul>
+        <li><strong>Model Selection:</strong> Testing logistic regression, decision trees, and ensemble methods, with an emphasis on minority class accuracy.</li>
+        <li><strong>Evaluation:</strong> Assessing each model using metrics such as precision, recall, and ROC-AUC.</li>
+      </ul>
+  
+      <!-- Conclusion -->
+      <h3>Conclusion</h3>
+      <p>This project has been an in-depth exploration of credit risk modeling. With model training underway, I look forward to using these engineered features to build a reliable predictive model that supports better credit decision-making for financial institutions.</p>
+  
+    </div>
+  </section>
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
