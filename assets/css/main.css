@@ -1073,6 +1073,11 @@ section,
   display: none;
 }
 
+/* Hide header specifically on pages with the "credit-risk-modeling-page" class */
+.credit-risk-modeling-page #header {
+  display: none;
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
