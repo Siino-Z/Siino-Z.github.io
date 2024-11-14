@@ -1069,6 +1069,32 @@ section,
 /*--------------------------------------------------------------
 # Credit Risk Modeling Page
 --------------------------------------------------------------*/
+.credit-risk-modeling-page {
+  background-color: #f9f9f9;
+  color: #212529; /* Ensure text color is dark enough */
+}
+
+.credit-risk-modeling-page .main .section {
+  padding: 40px 20px;
+}
+
+.credit-risk-modeling-page .page-title {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.credit-risk-modeling-page .page-title h1 {
+  margin: 0;
+}
+
+.credit-risk-modeling-page .container {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
 
 /*--------------------------------------------------------------
