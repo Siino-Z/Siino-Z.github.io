@@ -51,3 +51,6 @@ Next steps include training and evaluating models to predict credit risk. The pl
 
 ## Conclusion
 This project has been an in-depth exploration of credit risk modeling. With model training underway, I look forward to using these engineered features to build a reliable predictive model that supports better credit decision-making for financial institutions.
+
+
+**Explore the project notebook:** [credit-risk-modelling.ipynb](credit-risk-modelling.ipynb)
