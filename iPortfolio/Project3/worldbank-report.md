@@ -62,4 +62,4 @@ This project aims to shed light on the complexities of the global economy by lev
 - Maven Analytics for the project Idea and data
 
 
-**Explore the Project Notebook (if applicable):** [Link to your notebook] 
+**Explore the Project Notebook :** [WBReport.ipynb] (WBReport.ipynb)
