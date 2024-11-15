@@ -55,3 +55,5 @@ This project provides valuable insights into user behavior and movie preferences
 - ExploreAI Academy team for the support and resources
 - GroupLens research group for the MovieLens dataset.
 - IMDb for the movie metadata.
+
+**Explore the Project Notebook:** [iPortfolio/Project1/project-notebook.ipynb](iPortfolio/Project1/project-notebook.ipynb) 
