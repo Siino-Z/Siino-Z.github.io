@@ -50,18 +50,8 @@ This project provides valuable insights into user behavior and movie preferences
 
 ---
 
-## Team
-- \[Your Name] - Data Scientist and Machine Learning Engineer
-
----
-
 ## Acknowledgments
+- Fellow Student Data Scientists at ExploreAI Academy
+- ExploreAI Academy team for the support and resources
 - GroupLens research group for the MovieLens dataset.
 - IMDb for the movie metadata.
-- Surprise library for collaborative filtering algorithms.
-- Scikit-learn for data preprocessing and modeling tools.
-
-## Contact
-- \[Your Email Address]
-- \[Your LinkedIn Profile URL (optional)]
-```
