@@ -56,4 +56,4 @@ This project provides valuable insights into user behavior and movie preferences
 - GroupLens research group for the MovieLens dataset.
 - IMDb for the movie metadata.
 
-**Explore the Project Notebook:** [iPortfolio/Project1/project-notebook.ipynb](iPortfolio/Project1/project-notebook.ipynb) 
+**Explore the Project Notebook:** [project-notebook.ipynb](project-notebook.ipynb) 
