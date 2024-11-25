@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multivariate Predictive Maintenance</title>
+  <title>Movie Recommendation System</title>
   <style>
     /* Global Styles */
     body {
@@ -15,7 +15,7 @@
       line-height: 1.6;
     }
     header {
-      background: #1f78b4;
+      background: #8e44ad;
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -28,8 +28,6 @@
       margin: 5px 0 0;
       font-size: 1.2em;
     }
-
-    /* Main Content */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -44,45 +42,12 @@
     }
     section h2 {
       margin-top: 0;
-      color: #1f78b4;
+      color: #8e44ad;
     }
     section ul {
       list-style-type: square;
       margin-left: 20px;
     }
-    section ul li {
-      margin: 5px 0;
-    }
-    section pre {
-      background: #f4f4f9;
-      padding: 10px;
-      border-left: 5px solid #1f78b4;
-      overflow-x: auto;
-    }
-
-    /* Team Section */
-    .team {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-evenly;
-    }
-    .team div {
-      background: #f9f9f9;
-      padding: 10px;
-      text-align: center;
-      border-radius: 10px;
-      width: 30%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .team div img {
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 10px 0;
@@ -94,91 +59,55 @@
 <body>
 
   <header>
-    <h1>Multivariate Predictive Maintenance</h1>
-    <p>Leveraging Multivariate Data for Enhanced Operational Efficiency</p>
+    <h1>Movie Recommendation System</h1>
+    <p>Unveiling User Preferences and Predicting Movie Ratings</p>
   </header>
 
   <div class="container">
     <section>
       <h2>Project Overview</h2>
       <p>
-        This project, developed as part of an internship with Sand Technologies, focuses on creating a predictive maintenance system using multivariate data to enhance operational efficiency.
+        This project dives deep into the world of movie recommendation systems, crucial tools for navigating the vast sea of content in today's digital age. By combining data science, machine learning, and user behavior analysis, it predicts user preferences and offers tailored movie suggestions.
       </p>
-      <ul>
-        <li>Anticipates failures and improves safety.</li>
-        <li>Reduces costs with machine learning techniques.</li>
-        <li>Features interactive dashboards for real-time monitoring.</li>
-      </ul>
     </section>
 
     <section>
       <h2>Problem Statement</h2>
-      <p>
-        Modern industrial systems face challenges with unexpected equipment failures, leading to downtime and inefficiency. This project addresses these by:
-      </p>
       <ul>
-        <li>Proactively predicting failures using multivariate data.</li>
-        <li>Optimizing maintenance schedules.</li>
-        <li>Integrating explainable AI for actionable insights.</li>
+        <li><b>Challenge:</b> Accurately predict user ratings for unseen movies.</li>
+        <li><b>Objective:</b> Develop a recommendation system leveraging the enriched MovieLens dataset.</li>
       </ul>
     </section>
 
     <section>
       <h2>Data Summary</h2>
-      <ul>
-        <li><b>Errors:</b> Hourly logs of machine errors.</li>
-        <li><b>Maintenance Events:</b> Records of component replacements.</li>
-        <li><b>Failures:</b> Indications of failed components.</li>
-        <li><b>Telemetry:</b> Machine metrics like voltage, rotation, pressure, and vibration.</li>
-        <li><b>Metadata:</b> Information about machine model types and ages.</li>
-      </ul>
+      <p>
+        The project utilized the MovieLens dataset, augmented with IMDb metadata, to prepare features for content-based and collaborative filtering approaches.
+      </p>
     </section>
 
     <section>
       <h2>Key Steps in the Project</h2>
       <ul>
-        <li><b>Data Preprocessing:</b> Feature engineering on telemetry and maintenance datasets.</li>
-        <li><b>Modeling:</b> Algorithms like LightGBM, XGBoost, and Random Forest.</li>
-        <li><b>Explainability:</b> SHAP and LIME for insights into predictions.</li>
-        <li><b>Performance:</b> Achieved accuracy > 90%, precision > 97%.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Deployment</h2>
-      <ul>
-        <li>Power BI Dashboard for real-time insights.</li>
-        <li>Streamlit App for predictive analysis.</li>
+        <li><b>Data Preprocessing:</b> Cleaned and transformed the dataset, removing duplicates and preparing for modeling.</li>
+        <li><b>Modeling:</b> Implemented Content-Based Filtering, k-NN, and Matrix Factorization techniques (SVD, SVD++).</li>
+        <li><b>Performance Evaluation:</b> Evaluated RMSE for all models, with SVD++ showing the best performance.</li>
       </ul>
     </section>
 
     <section>
       <h2>Recommendations</h2>
       <ul>
-        <li>Implement feedback loops for continuous improvement.</li>
-        <li>Explore advanced architectures for dynamic updates.</li>
-        <li>Ensure compliance with ethical regulations.</li>
-        <li>Conduct training sessions for stakeholders.</li>
+        <li>Explore hybrid approaches for improved recommendation accuracy.</li>
+        <li>Incorporate user demographics and viewing history for personalization.</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Team</h2>
-      <div class="team">
-        <div><b>Sinothabo Zwane</b></div>
-        <div><b>Ntebatse Rachidi</b></div>
-        <div><b>Kedijang Setsome</b></div>
-        <div><b>Hlawulekani Rikhotso</b></div>
-        <div><b>Albinah Hlongo</b></div>
-        <div><b>Kaya Dumasi</b></div>
-        <div><b>Kanyisa Nake</b></div>
-      </div>
-    </section>
+    <footer>
+      <p>Developed by ExploreAI Academy Team &copy; 2024</p>
+    </footer>
   </div>
-
-  <footer>
-    <p>Developed by the Sand Technologies Team &copy; 2024</p>
-  </footer>
 
 </body>
 </html>
+
