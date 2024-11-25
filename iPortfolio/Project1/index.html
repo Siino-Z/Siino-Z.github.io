@@ -28,6 +28,7 @@
       margin: 5px 0 0;
       font-size: 1.2em;
     }
+
     .container {
       max-width: 1100px;
       margin: auto;
@@ -54,60 +55,87 @@
       background: #333;
       color: white;
     }
+    footer a {
+      color: #f1c40f;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Movie Recommendation System</h1>
-    <p>Unveiling User Preferences and Predicting Movie Ratings</p>
+    <p>Unveiling User Preferences and Predicting Movie Ratings through the Lens of Data Science</p>
   </header>
 
   <div class="container">
     <section>
       <h2>Project Overview</h2>
       <p>
-        This project dives deep into the world of movie recommendation systems, crucial tools for navigating the vast sea of content in today's digital age. By combining data science, machine learning, and user behavior analysis, it predicts user preferences and offers tailored movie suggestions.
+        This project dives deep into the world of movie recommendation systems, crucial tools for navigating the vast sea of content in today's digital age. By combining data science, machine learning, and user behavior analysis, we aim to predict user preferences and offer tailored movie suggestions, enhancing user satisfaction and platform engagement.
       </p>
     </section>
 
     <section>
       <h2>Problem Statement</h2>
       <ul>
-        <li><b>Challenge:</b> Accurately predict user ratings for unseen movies.</li>
-        <li><b>Objective:</b> Develop a recommendation system leveraging the enriched MovieLens dataset.</li>
+        <li><b>Challenge:</b> To accurately predict how a user will rate a movie they haven't seen based on their past preferences.</li>
+        <li><b>Objective:</b> Develop a robust recommendation system that improves content discovery and user satisfaction by leveraging the enriched MovieLens dataset, augmented with metadata and user-generated tags.</li>
       </ul>
     </section>
 
     <section>
       <h2>Data Summary</h2>
-      <p>
-        The project utilized the MovieLens dataset, augmented with IMDb metadata, to prepare features for content-based and collaborative filtering approaches.
-      </p>
+      <ul>
+        <li><b>Datasets:</b> Utilized the MovieLens dataset, including user ratings, movie information, and tags, enriched with IMDb data for detailed movie metadata.</li>
+        <li><b>Preprocessing:</b> Cleaned and transformed the data, including handling missing values (none found), removing duplicate entries (none found), and preparing features for modeling.</li>
+      </ul>
     </section>
 
     <section>
       <h2>Key Steps in the Project</h2>
+      <h3>1. Data Preprocessing and Feature Engineering</h3>
       <ul>
-        <li><b>Data Preprocessing:</b> Cleaned and transformed the dataset, removing duplicates and preparing for modeling.</li>
-        <li><b>Modeling:</b> Implemented Content-Based Filtering, k-NN, and Matrix Factorization techniques (SVD, SVD++).</li>
-        <li><b>Performance Evaluation:</b> Evaluated RMSE for all models, with SVD++ showing the best performance.</li>
+        <li>Removed specific characters ('|') from movie genres to create a suitable format for content-based filtering.</li>
+        <li>Explored and visualized the distribution of ratings, movie genres, and user tags to gain insights into the data.</li>
+      </ul>
+      <h3>2. Modeling Approach</h3>
+      <ul>
+        <li><b>Content-Based Filtering:</b> Developed a model that recommends movies based on the similarity of their genres using cosine similarity.</li>
+        <li><b>Collaborative Filtering:</b> Implemented various techniques, including:
+          <ul>
+            <li>Item-based k-Nearest Neighbors (k-NN) with cosine similarity.</li>
+            <li>User-based BaselineOnly algorithm.</li>
+            <li>Model-based matrix factorization techniques like Single Value Decomposition (SVD) and SVD++.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>3. Model Performance</h3>
+      <p>Evaluated models using Root Mean Squared Error (RMSE). SVD++ showed the best performance with the lowest RMSE.</p>
+    </section>
+
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Explore hybrid recommendation approaches combining content-based and collaborative filtering for potentially improved performance.</li>
+        <li>Fine-tune model parameters and explore alternative algorithms to further optimize prediction accuracy.</li>
+        <li>Incorporate user demographics and viewing history for more personalized recommendations.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Recommendations</h2>
-      <ul>
-        <li>Explore hybrid approaches for improved recommendation accuracy.</li>
-        <li>Incorporate user demographics and viewing history for personalization.</li>
-      </ul>
+      <h2>Conclusion</h2>
+      <p>
+        This project provides valuable insights into user behavior and movie preferences, contributing to the development of more effective recommendation systems. The models developed demonstrate promising accuracy in predicting user ratings, enhancing user satisfaction and driving platform engagement.
+      </p>
     </section>
 
     <footer>
-      <p>Developed by ExploreAI Academy Team &copy; 2024</p>
+      <p>Explore the Project Notebook: <a href="project-notebook.ipynb" target="_blank">project-notebook.ipynb</a></p>
+      <p>Special thanks to Fellow Student Data Scientists at ExploreAI Academy, the ExploreAI Academy team, GroupLens for the MovieLens dataset, and IMDb for the movie metadata.</p>
     </footer>
+
   </div>
 
 </body>
 </html>
-
