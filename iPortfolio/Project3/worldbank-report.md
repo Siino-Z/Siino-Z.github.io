@@ -17,8 +17,8 @@ This project aims to provide a comprehensive analysis of global economic trends 
 ---
 
 ## Data Summary
-- **Dataset:** World Bank Open Data, encompassing a wide range of economic indicators such as GDP, GNI, inflation, poverty rates, education levels, and more.
-- **Preprocessing:** The data will be cleaned and preprocessed, which may include handling missing values, converting data types, and aggregating data to appropriate levels (e.g., country-level, regional-level).
+- **Dataset:** World Bank Open Data, encompassing a wide range of economic indicators such as GDP, GDP Per Capita, unemployment rates, infant mortality rates, life expectancy, and more.
+- **Preprocessing:** The data was cleaned and preprocessed, including handling missing values, converting data types, and aggregating data to appropriate levels (e.g., country-level, regional-level).
 
 ---
 
