@@ -29,7 +29,6 @@
       font-size: 1.2em;
     }
 
-    /* Main Content */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -50,39 +49,14 @@
       list-style-type: square;
       margin-left: 20px;
     }
-    section ul li {
-      margin: 5px 0;
-    }
-    section pre {
-      background: #f4f4f9;
-      padding: 10px;
-      border-left: 5px solid #1f78b4;
-      overflow-x: auto;
-    }
-
-    /* Team Section */
-    .team {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-evenly;
-    }
-    .team div {
-      background: #f9f9f9;
-      padding: 10px;
-      text-align: center;
+    section img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px auto;
       border-radius: 10px;
-      width: 30%;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .team div img {
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 10px 0;
@@ -137,47 +111,46 @@
     <section>
       <h2>Key Steps in the Project</h2>
       <ul>
-        <li><b>Data Preprocessing:</b> Feature engineering on telemetry and maintenance datasets.</li>
-        <li><b>Modeling:</b> Algorithms like LightGBM, XGBoost, and Random Forest.</li>
-        <li><b>Explainability:</b> SHAP and LIME for insights into predictions.</li>
-        <li><b>Performance:</b> Achieved accuracy > 90%, precision > 97%.</li>
+        <li>Data preprocessing, including one-hot encoding and feature engineering.</li>
+        <li>Modeling using LightGBM, XGBoost, and Random Forest.</li>
+        <li>Explainability with SHAP and LIME for actionable insights.</li>
       </ul>
+      <h3>Analysis Insights</h3>
+      <img src="analysis_insights.png" alt="Analysis Insights Screenshot">
+    </section>
+
+    <section>
+      <h2>Model Performance</h2>
+      <p>The models achieved high accuracy and precision, with results summarized below:</p>
+      <img src="model_performance.png" alt="Model Performance Screenshot">
     </section>
 
     <section>
       <h2>Deployment</h2>
+      <p>
+        Interactive dashboards and applications were developed for real-time monitoring and decision-making:
+      </p>
       <ul>
-        <li>Power BI Dashboard for real-time insights.</li>
-        <li>Streamlit App for predictive analysis.</li>
+        <li><b>Power BI Dashboard:</b> Visual insights into machine performance and failure predictions.</li>
+        <li><b>Streamlit Application:</b> Web-based interface for exploring predictions and explainability outputs.</li>
       </ul>
+      <img src="dashboard.png" alt="Dashboard Screenshot">
+      <img src="app_interface.png" alt="App Interface Screenshot">
     </section>
 
     <section>
-      <h2>Recommendations</h2>
+      <h2>Future Improvements</h2>
       <ul>
         <li>Implement feedback loops for continuous improvement.</li>
         <li>Explore advanced architectures for dynamic updates.</li>
-        <li>Ensure compliance with ethical regulations.</li>
+        <li>Address ethical considerations to ensure compliance.</li>
         <li>Conduct training sessions for stakeholders.</li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Team</h2>
-      <div class="team">
-        <div><b>Sinothabo Zwane</b></div>
-        <div><b>Ntebatse Rachidi</b></div>
-        <div><b>Kedijang Setsome</b></div>
-        <div><b>Hlawulekani Rikhotso</b></div>
-        <div><b>Albinah Hlongo</b></div>
-        <div><b>Kaya Dumasi</b></div>
-        <div><b>Kanyisa Nake</b></div>
-      </div>
     </section>
   </div>
 
   <footer>
-    <p>Developed by the Sand Technologies Team &copy; 2024</p>
+    <p>Special thanks to the Sand Technologies team for providing support and resources throughout this project.</p>
   </footer>
 
 </body>
