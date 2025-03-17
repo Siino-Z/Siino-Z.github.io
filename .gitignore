@@ -1,0 +1,19 @@
+# Virtual environment 
+spacy_env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Logs and temporary files
+*.log
+*.tmp
+.ipynb_checkpoints/
