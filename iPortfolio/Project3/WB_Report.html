@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Bank Economic Trends Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .visual-description {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section ul {
+            margin-left: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        .footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .notebook-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .notebook-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .notebook-link a:hover {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>World Bank Economic Trends Analysis</h1>
+        <p>This report explores global economic and development trends using World Bank data (1960–2017). It includes interactive visualizations, key findings, and a detailed methodology.</p>
+
+        <!-- Link to Notebook -->
+        <div class="notebook-link">
+            <a href="https://github.com/Siino-Z/Siino-Z.github.io/blob/main/iPortfolio/Project3/WBReport.ipynb" target="_blank">View Full Notebook on GitHub</a>
+        </div>
+
+        <!-- Table of Contents -->
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#methodology">2. Methodology</a></li>
+            <li><a href="#findings">3. Key Findings</a></li>
+            <li><a href="#visualizations">4. Interactive Visualizations</a></li>
+            <li><a href="#conclusion">5. Conclusion</a></li>
+        </ul>
+
+        <!-- Introduction -->
+        <div class="section" id="introduction">
+            <h2>1. Introduction</h2>
+            <p>This analysis examines global economic and development trends using data from the World Bank. The goal is to uncover relationships between key indicators such as GDP, life expectancy, internet adoption, and energy consumption, while identifying disparities across regions and income groups.</p>
+            <p><strong>Objective:</strong> Understand and analyze global economic trends to inform policy recommendations and future research.</p>
+            <p><strong>Data Sources:</strong> World Bank Open Data (1960–2017).</p>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section" id="methodology">
+            <h2>2. Methodology</h2>
+            <h3>Data Cleaning & Preprocessing</h3>
+            <ul>
+                <li>Handled missing data using era-specific strategies (e.g., imputing 0 for internet usage pre-1990).</li>
+                <li>Calculated population using GDP and GDP per capita.</li>
+                <li>Applied linear interpolation for unemployment and infant mortality rates.</li>
+            </ul>
+            <h3>Exploratory Analysis</h3>
+            <ul>
+                <li>Analyzed temporal trends in life expectancy, GDP per capita, and internet adoption.</li>
+                <li>Created choropleth maps and regional bar charts to visualize disparities.</li>
+                <li>Compared metrics across regions and income groups using boxplots and radar charts.</li>
+            </ul>
+            <h3>Relationship Analysis</h3>
+            <ul>
+                <li>Identified strong correlations (e.g., life expectancy vs. crude birth rate: <strong>-0.85</strong>).</li>
+                <li>Used regression lines in scatter plots to illustrate relationships (e.g., GDP per capita vs. life expectancy).</li>
+            </ul>
+            <h3>Composite Development Index</h3>
+            <ul>
+                <li>Combined metrics like life expectancy, GDP per capita, and internet usage into a weighted index to rank countries.</li>
+            </ul>
+        </div>
+
+        <!-- Key Findings -->
+        <div class="section" id="findings">
+            <h2>3. Key Findings</h2>
+            <h3>Economic & Health Trends</h3>
+            <ul>
+                <li><strong>GDP per capita</strong> strongly correlates with life expectancy (<strong>r = 0.57</strong>) and internet adoption (<strong>r = 0.71</strong>).</li>
+                <li>High-income OECD countries had <strong>2.5x higher life expectancy</strong> than low-income nations in 2017.</li>
+            </ul>
+            <h3>Technological Adoption</h3>
+            <ul>
+                <li>Internet usage surged post-2000, with Europe & North America exceeding <strong>75% adoption</strong> by 2017, while Sub-Saharan Africa lagged at <strong><15%</strong>.</li>
+            </ul>
+            <h3>Regional Disparities</h3>
+            <ul>
+                <li><strong>Sub-Saharan Africa</strong> faced the highest infant mortality (<strong>55.1 per 1,000 births</strong>) and lowest electricity consumption (<strong>199 kWh per capita</strong>).</li>
+                <li><strong>North America</strong> led in GDP per capita (<strong>$61,385</strong>) and life expectancy (<strong>81 years</strong>).</li>
+            </ul>
+            <h3>Income Group Comparisons</h3>
+            <ul>
+                <li>The gap in life expectancy between high-income OECD and low-income countries widened from <strong>20 years (1960)</strong> to <strong>25 years (2017)</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- Interactive Visualizations -->
+        <div class="section" id="visualizations">
+            <h2>4. Interactive Visualizations</h2>
+            <h3>1. Internet Adoption (2017)</h3>
+            <p class="visual-description">Explore global internet penetration rates across countries.</p>
+            <iframe src="Images/internet_usage_map_2017.html"></iframe>
+
+            <h3>2. GDP vs. Life Expectancy (1960–2017)</h3>
+            <p class="visual-description">Track how countries evolved over time in terms of GDP and life expectancy.</p>
+            <iframe src="Images/animated_scatter_gdp_life_expectancy.html"></iframe>
+
+            <h3>3. Regional Comparison Across Metrics</h3>
+            <p class="visual-description">Compare regions across health, economic, and technological indicators.</p>
+            <iframe src="Images/regional_radar_chart.html"></iframe>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="section" id="conclusion">
+            <h2>5. Conclusion</h2>
+            <p>This analysis highlights the critical role of economic stability and technological infrastructure in driving development. Key recommendations include:</p>
+            <ul>
+                <li><strong>Policy Focus:</strong> Invest in renewable energy and digital infrastructure for low-income regions.</li>
+                <li><strong>Healthcare Initiatives:</strong> Address infant mortality through targeted public health programs.</li>
+                <li><strong>Future Work:</strong> Expand analysis to include climate variables and policy impact case studies.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Created by <strong>Sinothabo Z</strong> | <a href="iPortfolio/Project3/WBReport.ipynb" target="_blank">GitHub</a></p>
+    </div>
+</body>
+</html>
