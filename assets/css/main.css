@@ -1103,3 +1103,202 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* ====== Header Styles ====== */
+#header {
+  background: #fff; /* Or a very light grey: #f8f8f8; */
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+#header .container {
+  max-width: 1200px; /* Or your preferred max width */
+  margin: 0 auto;
+  padding: 0 15px; /* Add some padding */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* -- Profile Image -- */
+.profile-img {
+  margin-right: 20px;
+}
+
+.profile-img img {
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.profile-img img:hover {
+  box-shadow: 0 0 0 3px #149ddd; /* Highlight on hover */
+}
+
+/* -- Logo/Name -- */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #149ddd;
+}
+
+.logo .name {
+  font-family: "Lato", sans-serif; /* Use your chosen font */
+}
+
+/* -- Social Links -- */
+.social-links {
+  display: flex;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  color: #666;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #149ddd;
+  color: #fff;
+  border-color: #149ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* -- Navigation -- */
+.navmenu {
+  /* You might not need specific styling here if using flexbox on parent */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px; /* Space for the underline */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #149ddd;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #149ddd;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* -- Mobile Menu Toggle -- */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  display: none; /* Hidden by default on larger screens */
+}
+
+/* -- Media Query for Mobile -- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+    position: relative;
+  }
+
+  .profile-img {
+    margin: 0 auto 10px; /* Center image */
+  }
+
+  .logo {
+    order: -1; /* Move logo to the top */
+    margin-bottom: 10px;
+  }
+
+  .social-links {
+    order: -2; /* Move social links before logo */
+    margin-bottom: 10px;
+  }
+
+  .navmenu {
+    position: absolute;
+    top: 100%; /* Position below header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-link {
+    width: 100%;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block; /* Show on mobile */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
