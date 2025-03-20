@@ -365,3 +365,355 @@
   transition: 0.9s;
   background-color: var(--accent-color);
 }
+
+/* ====== Technology Stack Section Styles ====== */
+#tech-stack {
+  padding: 80px 0; /* Adjust padding */
+}
+
+#tech-stack .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#tech-stack .section-title h2 {
+  font-size: 2.5rem; /* Adjust size */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#tech-stack .section-title p {
+  font-size: 1.1rem; /* Adjust size */
+  color: #666;
+}
+
+/* Tech Item Styles */
+.tech-item {
+  background-color: #f8f8f8; /* Or a light color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.tech-item .icon {
+  font-size: 3rem; /* Adjust size */
+  margin-bottom: 10px;
+}
+
+.tech-item h4 {
+  font-size: 1.2rem; /* Adjust size */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tech-item p {
+  font-size: 1rem; /* Adjust size */
+  color: #666;
+}
+
+/* Consistent Icon Colors */
+#tech-stack .bi-database {
+  color: #17a2b8;
+}
+
+#tech-stack .bi-wrench {
+  color: #28a745;
+}
+
+#tech-stack .bi-bar-chart {
+  color: #ffc107;
+}
+
+#tech-stack .bi-cpu {
+  color: #6f42c1;
+}
+
+#tech-stack .bi-rocket {
+  color: #fd7e14;
+}
+
+#tech-stack .bi-git {
+  color: #007bff;
+}
+
+/* ====== Portfolio Section Styles ====== */
+#portfolio {
+  padding: 80px 0; /* Adjust padding as needed */
+}
+
+#portfolio .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#portfolio .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#portfolio .section-title p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Portfolio Item Styles */
+.portfolio-item {
+  margin-bottom: 30px; /* Space between items */
+}
+
+.portfolio-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-content:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.portfolio-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-content:hover .portfolio-info {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.portfolio-info h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  font-size: 1rem;
+  color: #eee;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Links */
+.portfolio-links {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-links a {
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-links a:hover {
+  background-color: color-mix(in srgb, var(--accent-color), white 20%);
+}
+
+/* ====== Learning Corner Section Styles ====== */
+#learning-corner {
+  padding: 80px 0; /* Adjust padding as needed */
+}
+
+#learning-corner .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#learning-corner .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#learning-corner .section-title p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Learning Item Styles */
+.learning-item {
+  background-color: #f8f8f8; /* Or a light color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+  align-items: center; /* Vertically center the content */
+}
+
+.learning-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.learning-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.learning-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.learning-item .progress {
+  height: 10px; /* Adjust progress bar height */
+  background-color: #ddd; /* Light gray background */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.learning-item .progress-bar {
+  background-color: var(--accent-color); /* Use your accent color */
+  border-radius: 5px;
+}
+
+.learning-item i {
+  font-size: 2rem; /* Adjust icon size */
+  color: var(--accent-color); /* Use your accent color */
+  margin-left: 20px; /* Spacing for the icon */
+}
+
+/* ====== Latest News Section Styles ====== */
+#latest-news {
+  padding: 80px 0; /* Adjust padding as needed */
+}
+
+#latest-news .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#latest-news .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#latest-news .section-title p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* News Item Styles */
+.news-item {
+  background-color: #f8f8f8; /* Or a light color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.news-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.news-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.news-img:hover img {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.news-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  padding: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-title:hover {
+  color: var(--accent-color); /* Use your accent color */
+}
+
+.news-meta {
+  padding: 0 15px 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.news-meta i {
+  margin-right: 5px;
+}
+
+/* ====== Footer Styles ====== */
+#footer {
+  background: #333; /* A dark background */
+  padding: 30px 0;
+  font-size: 0.9rem;
+  color: #eee; /* Light text color */
+  text-align: center;
+}
+
+#footer .copyright {
+  margin-bottom: 10px;
+}
+
+#footer .sitename {
+  font-weight: bold;
+  color: #fff;
+}
+
+#footer .credits {
+  color: #999;
+}
+
+#footer .credits a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#footer .credits a:hover {
+  color: var(--accent-color); /* Use your accent color */
+}
