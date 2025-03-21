@@ -1,5 +1,5 @@
 
-
+/*-------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
@@ -1117,4 +1117,47 @@ section,
 .neumorphism:hover {
   transform: translateY(-5px);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Social Links Hover Effect */
+.social-links a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: var(--accent-color);
+}
+
+/* Header Toggle for Mobile */
+.header-toggle {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .header-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    color: var(--contrast-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .header {
+    left: -100%;
+    transition: left 0.3s ease;
+  }
+
+  .header.header-show {
+    left: 0;
+  }
 }
