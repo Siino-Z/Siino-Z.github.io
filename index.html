@@ -4,17 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>SinoZ - iPortfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Sino Zwane | Data Scientist</title>
+  <meta content="Portfolio of Sino Zwane, a Data Scientist and Cloud Enthusiast" name="description">
+  <meta content="Data Science, Machine Learning, Cloud Computing, Python, AWS, Azure" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,50 +26,45 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- Header Section with Glassmorphism -->
+  <header id="header" class="header glassmorphism d-flex flex-column">
+    <!-- Toggle Button for Mobile -->
+    <i class="header-toggle d-xl-none bi bi-list" id="header-toggle"></i>
 
+    <!-- Profile Image -->
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.png" alt="Sino Zwane" class="img-fluid rounded-circle">
     </div>
 
+    <!-- Logo and Name -->
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Sino Zwane</h1>
     </a>
 
+    <!-- Social Links -->
     <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="twitter" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus" title="Skype"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
     </div>
 
-  <nav id="navmenu" class="navmenu" aria-label="Primary Navigation">
-    <ul>
-      <li><a href="#hero" class="active" aria-current="page"><i class="bi bi-house navicon"></i> Home</a></li>
-      <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-      <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-      <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-      <li><a href="#learning-corner"><i class="bi bi-hdd-stack navicon"></i> My Learning Library</a></li>
-      <li><a href="#latest-news"><i class="bi bi-newspaper navicon"></i> Latest News</a></li>
-    </ul>
-  </nav>
-
+    <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="#hero" class="active" aria-current="page"><i class="bi bi-house navicon"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#learning-corner"><i class="bi bi-hdd-stack navicon"></i> My Learning Library</a></li>
+        <li><a href="#latest-news"><i class="bi bi-newspaper navicon"></i> Latest News</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="main">
@@ -139,66 +135,57 @@
 
     <!-- Skills Section -->
     <section class="skills section light-background" id="skills">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
         <p>These are my current core technical skills in data science and analytics. I am continually building on these foundations and cultivating new expertise to stay at the forefront of the field.</p>
-      </div><!-- End Section Title -->
+      </div>
     
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
-          
           <!-- Left Column -->
-          <div class="col-lg-6 skills-content skills-animation">
-            <div class="progress">
+          <div class="col-lg-6 skills-content">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Data Analysis (Python, SQL) <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="progress">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Machine Learning (Scikit-Learn) <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="progress">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Cloud Fundamentals (AWS, Azure) <i class="val">40%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="progress">
-              <span class="skill">Analytical Thinking & Problem Solving <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div><!-- End Left Column -->
+          </div>
     
           <!-- Right Column -->
-          <div class="col-lg-6 skills-content skills-animation">
-            <div class="progress">
+          <div class="col-lg-6 skills-content">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Data Visualization (Power BI, Tableau) <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="progress">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Data Cleaning & Preprocessing (Python, SQL) <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="progress">
+            <div class="neumorphism p-4 mb-4">
               <span class="skill">Communication & Presentation <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
-          </div><!-- End Right Column -->
-    
-        </div><!-- End Row -->
+          </div>
+        </div>
       </div>
     </section><!-- /Skills Section -->
 
@@ -210,10 +197,9 @@
         <p>This is my current technology stack, encompassing tools and platforms I utilize across the data science pipeline, from data collection to model deployment.</p>
     
         <div class="row gy-4 mt-4">
-    
           <!-- Tech Item: Data Collection and Storage -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #17a2b8;"><i class="bi bi-database"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Data Collection & Storage</h4>
               <p style="font-size: 0.9rem; color: #555;">SQL, PostgreSQL, MongoDB, AWS S3</p>
@@ -222,7 +208,7 @@
     
           <!-- Tech Item: Data Cleaning and Preprocessing -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #28a745;"><i class="bi bi-wrench"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Data Cleaning & Preprocessing</h4>
               <p style="font-size: 0.9rem; color: #555;">Python (pandas, numpy), AWS Glue</p>
@@ -231,7 +217,7 @@
     
           <!-- Tech Item: Data Exploration and Visualization -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #ffc107;"><i class="bi bi-bar-chart"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Data Exploration & Visualization</h4>
               <p style="font-size: 0.9rem; color: #555;">Matplotlib, Seaborn, Tableau, Power BI</p>
@@ -240,7 +226,7 @@
     
           <!-- Tech Item: Machine Learning and Modeling -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #6f42c1;"><i class="bi bi-cpu"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Machine Learning & Modeling</h4>
               <p style="font-size: 0.9rem; color: #555;">Scikit-Learn, TensorFlow, PyTorch, XGBoost</p>
@@ -249,7 +235,7 @@
     
           <!-- Tech Item: Deployment and Serving Models -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #fd7e14;"><i class="bi bi-rocket"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Deployment & Serving</h4>
               <p style="font-size: 0.9rem; color: #555;">Flask, FastAPI</p>
@@ -258,7 +244,7 @@
     
           <!-- Tech Item: Version Control and Collaboration -->
           <div class="col-lg-4 col-md-6">
-            <div class="tech-item text-center p-4" style="background-color: #f7f9fc; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
               <div class="icon mb-3" style="font-size: 3rem; color: #007bff;"><i class="bi bi-git"></i></div>
               <h4 style="font-size: 1.15rem; font-weight: bold; color: #333;">Version Control & Collaboration</h4>
               <p style="font-size: 0.9rem; color: #555;">Git, GitHub, GitLab, Jupyter</p>
@@ -346,40 +332,29 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
-      
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
         <p>Explore my projects across data analytics, machine learning, and cloud computing.</p>
-      </div><!-- End Section Title -->
+      </div>
     
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-    
-          <!-- Single "All" Tab Only -->
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-          </ul><!-- End Portfolio Filters -->
-    
-          <!-- Portfolio Items -->
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-    
-            <!-- Project 1: Movie Recommendation System -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/Project 2.PNG" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Movie Recommendation System</h4>
-                  <p>Created a recommendation system using collaborative filtering and matrix factorization techniques.</p>
-                  <a href="assets/img/portfolio/Project 2.PNG" title="Movie Recommendation System" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="iPortfolio/Project1/index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="row gy-4">
+          <!-- Project 1: Movie Recommendation System -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
+              <img src="assets/img/portfolio/Project 2.PNG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Movie Recommendation System</h4>
+                <p>Created a recommendation system using collaborative filtering and matrix factorization techniques.</p>
+                <a href="assets/img/portfolio/Project 2.PNG" title="Movie Recommendation System" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="iPortfolio/Project1/index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
+            </div>    
             </div><!-- End Portfolio Item -->
     
             <!-- Project 2: Multivariate Predictive Maintenance -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
+              <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
                 <img src="assets/img/portfolio/Project 1.PNG" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Multivariate Predictive Maintenance</h4>
@@ -392,7 +367,7 @@
     
             <!-- Project 3: World Economic Report -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
+              <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
                 <img src="assets/img/portfolio/global-business-graph-growth-finance-stock-market-concept.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>World Economic Report</h4>
@@ -405,7 +380,7 @@
     
             <!-- Project 4: Credit Card Fraud Detection -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
+              <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
                 <img src="assets/img/portfolio/8142718_3829151.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Credit Fraud Detection</h4>
@@ -418,7 +393,7 @@
     
             <!-- Placeholder 1: Coming Soon -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
+              <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
                 <img src="assets/img/portfolio/coming-soon-2550190_640.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Coming Soon</h4>
@@ -429,7 +404,7 @@
     
             <!-- Placeholder 2: Coming Soon -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
+              <div class="glassmorphism p-4 text-center" style="border-radius: 10px;">
                 <img src="assets/img/portfolio/coming-soon-2550190_640.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Coming Soon</h4>
@@ -628,7 +603,7 @@
       <div class="credits">
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by Sino, built on template from <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
@@ -655,6 +630,13 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+    <!-- Custom Script for Header Toggle -->
+    <script>
+      document.getElementById('header-toggle').addEventListener('click', () => {
+        const header = document.getElementById('header');
+        header.classList.toggle('header-show');
+      });
+    </script>
 </body>
 
 </html>
