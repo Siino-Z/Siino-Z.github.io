@@ -3,106 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Credit Card Fraud Detection</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Credit Fraud Detection | Portfolio Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e6ebf5, #f7f9fb);
+      color: #1c1e21;
+      line-height: 1.7;
+      font-size: 17px;
       padding: 2rem;
-      color: #2c3e50;
-      font-size: 14px;
     }
-    .glass-container {
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      max-width: 1800px;
+    .container {
+      max-width: 1100px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #2c3e50;
-      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+    }
+    p, ul {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
     }
     img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
+      width: 100%;
       border-radius: 12px;
-    }
-    ul, p {
-      line-height: 1.8;
-      font-size: 1.1em;
+      margin: 1.5rem 0;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 1.05em;
+      margin-top: 1rem;
+      font-size: 0.95rem;
     }
     th, td {
       padding: 1rem;
       text-align: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid #ddd;
     }
     th {
-      background-color: rgba(173, 216, 230, 0.3);
+      background-color: rgba(173, 216, 230, 0.2);
     }
-    a {
-      color: #3b5998;
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
       text-decoration: none;
-      font-size: 1.05em;
+      color: #2c3e50;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+    .links a:hover {
+      background: rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
-  <div class="glass-container">
-    <h1>💳 Credit Card Fraud Detection</h1>
-    <p><strong>Project Type:</strong> Machine Learning · Classification · Fraud Analytics</p>
+  <div class="container">
+    <h1>Credit Card Fraud Detection</h1>
+    <p><strong>Domain:</strong> Finance & Cybersecurity &nbsp;|&nbsp; <strong>Tools:</strong> Python, XGBoost, Scikit-learn, Matplotlib, Seaborn</p>
 
-    <img src="/assets/img/portfolio/fraud-overview.png" alt="Fraud Detection Overview" />
-
-    <p>This project focuses on detecting fraudulent credit card transactions using machine learning techniques. A real-world-style dataset was used to train and evaluate multiple models including Logistic Regression, Random Forest, and XGBoost. The best-performing model achieved over <strong>97% accuracy</strong> with a ROC-AUC of <strong>0.997</strong> after tuning.</p>
+    <h2>Project Overview</h2>
+    <p>This machine learning project investigates the detection of fraudulent credit card transactions using a real-world-style dataset. The goal was to develop and compare classification models and provide insights into transaction patterns and fraud detection techniques.</p>
 
     <h2>Objectives</h2>
     <ul>
-      <li>Train ML models to detect fraudulent transactions</li>
-      <li>Visualize transaction and fraud trends</li>
-      <li>Analyze model performance with evaluation metrics</li>
-      <li>Identify key features contributing to fraud</li>
-      <li>Save and prepare models for deployment</li>
+      <li>Train ML models to classify transactions as fraudulent or legitimate</li>
+      <li>Conduct statistical analysis of fraud patterns</li>
+      <li>Visualize trends by transaction type, location, and merchant</li>
+      <li>Deploy a trained model for future use</li>
     </ul>
 
-    <h2>Data Overview</h2>
-    <p>The dataset included fields such as Transaction Type, Amount, Location, Time, Merchant ID, and a fraud label (IsFraud).</p>
+    <h2>Dataset Summary</h2>
     <ul>
-      <li>🕐 Timestamps extracted into <strong>Hour</strong>, <strong>Day</strong>, and <strong>Month</strong></li>
-      <li>🗺️ Multiple cities across the U.S. represented in <strong>Location</strong></li>
-      <li>💳 About <strong>1% of transactions</strong> were fraudulent</li>
+      <li>98,000+ records with ~1% fraudulent transactions</li>
+      <li>Features include transaction type, location, amount, merchant ID, and timestamps</li>
+      <li>Date and time features engineered for modeling</li>
     </ul>
 
-    <img src="feature-importance-xgb.png" alt="XGBoost Feature Importance" />
-    <img src="feature-importance-rf.png" alt="Random Forest Feature Importance" />
+    <img src="/assets/img/portfolio/fraud-overview.png" alt="Fraud overview" />
 
-    <h2>Model Performance</h2>
+    <h2>Modeling</h2>
+    <p>Three models were compared:</p>
+    <ul>
+      <li><strong>Logistic Regression:</strong> 64% Accuracy | ROC-AUC: 0.66</li>
+      <li><strong>Random Forest:</strong> 97% Accuracy | ROC-AUC: 0.997</li>
+      <li><strong>Tuned XGBoost:</strong> 92% Accuracy | ROC-AUC: 0.976</li>
+    </ul>
+
     <table>
       <thead>
         <tr>
           <th>Model</th>
           <th>Accuracy</th>
           <th>ROC-AUC</th>
-          <th>F1-Score</th>
+          <th>F1 Score</th>
         </tr>
       </thead>
       <tbody>
@@ -128,20 +149,19 @@
     </table>
 
     <h2>Feature Importance</h2>
-    <ul>
-      <li>🧾 <strong>Transaction Type</strong> and <strong>Amount</strong> were top indicators of fraud</li>
-      <li>📍 Location and Merchant ID also contributed significantly</li>
-    </ul>
+    <p>Top predictors included transaction type, amount, merchant ID, and time-of-day features.</p>
+    <img src="feature-importance-xgb.png" alt="XGBoost Feature Importance" />
+    <img src="feature-importance-rf.png" alt="Random Forest Feature Importance" />
 
-    <h2>Deployment Ready</h2>
-    <p>The Random Forest model was saved using <code>joblib</code> and will later be deployed via Flask for real-time prediction interfaces.</p>
+    <h2>Deployment</h2>
+    <p>The Random Forest and XGBoost models were serialized using Joblib for deployment in application as a Flask API. Future enhancements include real-time fraud scoring and user feedback loops.</p>
 
     <h2>Resources</h2>
-    <ul>
-      <li><a href="https://github.com/Siino-Z/Siino-Z.github.io/blob/main/iPortfolio/Project4/credit-fraud-detection.ipynb" target="_blank">🔗 View Code on GitHub</a></li>
-      <li><a href="/assets/docs/credit_fraud_report.pdf" target="_blank">Download Project Report (PDF)</a></li>
-      <li><a href="https://your-streamlit-link.com" target="_blank">🚀 Live App coming soon!</a></li>
-    </ul>
+    <div class="links">
+      <a href="iPortfolio/Project4/credit-fraud-detection.ipynb" target="_blank">Explore Project Notebook</a>
+      <a href="/assets/docs/credit_fraud_report.pdf" target="_blank">Download Report (PDF)</a>
+      <a href="https://your-streamlit-app-link.com" target="_blank">Live App, coming soon!</a>
+    </div>
   </div>
 </body>
 </html>
