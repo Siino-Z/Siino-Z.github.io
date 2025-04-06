@@ -1,0 +1,99 @@
+**Credit Card Fraud Detection Project Report**
+
+---
+
+**Project Title:** Credit Card Fraud Detection Using Machine Learning
+
+**Prepared by:** Sinothabo  
+**Date:** April 2025  
+**Tools Used:** Python, Scikit-learn, XGBoost, Matplotlib, Seaborn, Pandas, Joblib  
+**Deployment Ready:** Random Forest and XGBoost models saved for deployment
+
+---
+
+### 1. **Introduction**
+Credit card fraud is a persistent issue with significant financial consequences. This project aims to detect fraudulent transactions using machine learning algorithms. A dataset mimicking real-world transaction behavior, including both fraudulent and non-fraudulent activities, was used for analysis.
+
+---
+
+### 2. **Objectives**
+- Build models that can accurately detect fraud in transactions
+- Analyze statistical trends in fraudulent vs. legitimate activity
+- Visualize transaction behavior and feature importance
+- Compare performance across algorithms
+- Save models for future deployment
+
+---
+
+### 3. **Dataset Overview**
+The dataset included the following features:
+- `TransactionID`: Unique identifier
+- `TransactionDate`: Time of transaction
+- `Amount`: Value of the transaction
+- `MerchantID`: Identifier for the merchant
+- `TransactionType`: 'Purchase' or 'Refund'
+- `Location`: US city where the transaction occurred
+- `IsFraud`: Target label (1 = fraud, 0 = not fraud)
+
+Derived temporal features (Hour, Day, Month) were extracted from the timestamp.
+
+---
+
+### 4. **Exploratory Data Analysis**
+- Only ~1% of transactions were fraudulent
+- Refunds and high-value transactions had higher fraud rates
+- Certain locations and merchant IDs showed increased fraud likelihood
+
+---
+
+### 5. **Model Building & Evaluation**
+Three models were trained and evaluated:
+
+**Model Performance Comparison**
+
+- **Logistic Regression**:  
+  Accuracy: 64%  
+  ROC-AUC: 0.66  
+  F1-Score: 0.64
+
+- **Random Forest**:  
+  Accuracy: 97%  
+  ROC-AUC: 0.997  
+  F1-Score: 0.97
+
+- **Tuned XGBoost**:  
+  Accuracy: 92%  
+  ROC-AUC: 0.976  
+  F1-Score: 0.92
+
+**Tuning XGBoost:**
+- GridSearchCV was used for hyperparameter tuning
+- Parameters: `n_estimators`, `max_depth`, `learning_rate`, etc.
+
+---
+
+### 6. **Feature Importance**
+Key features contributing to predictions:
+- `Amount`
+- `TransactionType`
+- `Location`
+- `MerchantID`
+
+Visuals were generated using `xgboost.plot_importance()` and `feature_importances_` from Random Forest.
+
+---
+
+### 7. **Model Deployment**
+The Random Forest and XGBoost models were saved using Joblib for future deployment in a Flask application.
+
+---
+
+### 8. **Conclusion**
+The project successfully built high-performing models for fraud detection. The Random Forest and XGBoost models showed strong predictive capabilities. Further steps include deploying the model as a live service and integrating it into a financial transaction system.
+
+---
+
+### 9. **Resources**
+- GitHub Repository: [https://github.com/Siino-Z/Siino-Z.github.io/blob/main/iPortfolio/Project4/credit-fraud-detection.ipynb]
+- Project Web Page: [https://siino-z.github.io/iPortfolio/Project4/credit-fraud-detection.html]
+
