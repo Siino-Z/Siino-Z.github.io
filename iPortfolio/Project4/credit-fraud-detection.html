@@ -12,6 +12,7 @@
       margin: 0;
       padding: 2rem;
       color: #2c3e50;
+      font-size: 18px;
     }
     .glass-container {
       background: rgba(255, 255, 255, 0.15);
@@ -26,6 +27,7 @@
     }
     h1, h2 {
       color: #2c3e50;
+      font-size: 1.8em;
     }
     img {
       max-width: 100%;
@@ -34,7 +36,7 @@
       border-radius: 12px;
     }
     ul, p {
-      line-height: 1.6;
+      line-height: 1.7;
     }
     table {
       width: 100%;
@@ -45,7 +47,7 @@
       overflow: hidden;
     }
     th, td {
-      padding: 0.75rem;
+      padding: 0.9rem;
       text-align: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -68,9 +70,9 @@
 
     <img src="/assets/img/portfolio/fraud-overview.png" alt="Fraud Detection Overview" />
 
-    <p>This project focuses on detecting fraudulent credit card transactions using machine learning techniques. A real-world-style dataset was used to train and evaluate multiple models including Logistic Regression, Random Forest, and XGBoost. The best-performing model achieved over <strong>92% accuracy</strong> with a ROC-AUC of <strong>0.976</strong> after tuning.</p>
+    <p>This project focuses on detecting fraudulent credit card transactions using machine learning techniques. A real-world-style dataset was used to train and evaluate multiple models including Logistic Regression, Random Forest, and XGBoost. The best-performing model achieved over <strong>97% accuracy</strong> with a ROC-AUC of <strong>0.997</strong> after tuning.</p>
 
-    <h2>🎯 Objectives</h2>
+    <h2>Objectives</h2>
     <ul>
       <li>Train ML models to detect fraudulent transactions</li>
       <li>Visualize transaction and fraud trends</li>
@@ -79,7 +81,7 @@
       <li>Save and prepare models for deployment</li>
     </ul>
 
-    <h2>📊 Data Overview</h2>
+    <h2>Data Overview</h2>
     <p>The dataset included fields such as Transaction Type, Amount, Location, Time, Merchant ID, and a fraud label (IsFraud).</p>
     <ul>
       <li>🕐 Timestamps extracted into <strong>Hour</strong>, <strong>Day</strong>, and <strong>Month</strong></li>
@@ -90,7 +92,7 @@
     <img src="feature-importance-xgb.png" alt="XGBoost Feature Importance" />
     <img src="feature-importance-rf.png" alt="Random Forest Feature Importance" />
 
-    <h2>📈 Model Performance</h2>
+    <h2>Model Performance</h2>
     <table>
       <thead>
         <tr>
@@ -122,7 +124,7 @@
       </tbody>
     </table>
 
-    <h2>🔍 Feature Importance</h2>
+    <h2>Feature Importance</h2>
     <ul>
       <li>🧾 <strong>Transaction Type</strong> and <strong>Amount</strong> were top indicators of fraud</li>
       <li>📍 Location and Merchant ID also contributed significantly</li>
